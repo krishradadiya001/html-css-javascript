@@ -1,0 +1,111 @@
+.p1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.p2{
+  
+}
+.p3{
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: rgb(17, 227, 94);
+    font-weight: bold;
+}
+.p4:hover{
+    background-color: blueviolet;
+}
+.p5:hover
+{
+    font: size 200px;;
+    background-color: blueviolet;
+    font-style: italic;
+    font-weight: bold;
+}
+.p6
+{
+    float: right;
+}
+.p7
+{
+        animation-name:example;
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
+        animation-delay: 1s;
+        font-weight: bold;
+}
+
+@keyframes example {
+    0%{color: red;}
+    25%{color: green;}
+    50%{color: yellow;}
+    100%{color: blue;}
+}
+.p8
+{
+        animation-name:ex;
+        animation-duration: 1s;
+        animation-iteration-count:infinite;
+        animation-delay: 2ms;
+}
+
+@keyframes ex {
+    0%{color: red;}
+    100%{color: blue;}
+}
+.p10{
+    background-color: thistle;
+}
+.p11:hover{}
+
+.p12{
+    
+    font-weight: bold;
+}
+.p13:hover{
+}
+.p15{
+    background-color: aqua;
+}
+.p16:hover{
+    background-color:blueviolet;
+    color: aquamarine;
+    font-weight: bold;
+}
+.p17{
+    background-color: rgb(30, 86, 155);
+}
+.p18{
+    background-color: white;
+}
+.p19{
+   border: 1px solid;
+   background-color: rgb(23, 248, 109);
+}
+.p20{
+    border: 1px solid;
+    background-color: rgb(16, 152, 55);
+}
+.p21{
+    background-color: black;
+}
+.p22:hover{
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+    background-color: aqua;
+    color:brown
+}
+.p23{
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.42857143;
+    height: 75px;
+    padding-top:20px;
+
+
+}
+.p24
+{
+    border-radius: 50%;
+}

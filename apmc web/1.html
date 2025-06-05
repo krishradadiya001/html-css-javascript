@@ -1,0 +1,4959 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APMC</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="apmc.css">
+
+</head>
+<body class="p2" id="b1">
+  <nav class="navbar navbar-expand-sm navbar-light bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo.jpeg" height="60px" class="rounded-circle"alt="sorry"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div  class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link p4 active m-3" data-bs-toggle="tab" href="#item1" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p4 m-3" data-bs-toggle="tab" href="#item2" >Market Rates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p4 m-3" data-bs-toggle="tab" href="#item3" >Auction Details</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link p4 m-3" data-bs-toggle="tab" href="#item4" >Contact Us</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link p4 m-3" data-bs-toggle="tab" href="#item5" >apmc list</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link p4 m-3" data-bs-toggle="tab" href="#item6" >Gallery</a>
+          </li>
+            <li class="nav-item m-3">
+                        <button  class="btn p3 p4" data-bs-toggle="modal" data-bs-target="#ex" style="margin-left: 200px;">login</button>
+                         <div id="ex" class="modal fade" >
+                             <div class="modal-dialog modal-dialog-centered">
+                                 <div class="modal-content p15">
+                                     <div class="modal-header p13">
+                                         <h5 class="modal-title p8 p1 ">login details</h5>
+                                         <button class="btn-close" data-bs-dismiss="modal"></button>
+                                     </div>
+                                     <div class="modal-body p16">
+                                        <form id="loginForm" onsubmit="return validateForm()">
+                                            <div class="form-group">
+                                                <label for="username">Username:</label>
+                                                <input type="text" id="username" name="username" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password:</label>
+                                                <input type="password" id="password" name="password" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit">Login</button>
+                                            </div>
+                                            <div id="error-message" class="error-message"></div>
+                                        </form>
+                                    <script src="loginpassword.js"></script>
+                                     </div>
+                                     <div class="modal-footer p13">
+                                         <button class="btn btn-info" data-bs-dismiss="modal">close</button>
+                                     </div>
+                                    </div>
+                                 </div>w
+                                 
+                             </div>
+            </li>
+            <li class="nav-item m-3">
+              <button  class="btn p3 p4" data-bs-toggle="modal" data-bs-target="#ex1">resistration</button>
+               <div id="ex1" class="modal fade">
+                   <div class="modal-dialog modal-dialog-centered">
+                       <div class="modal-content p15">
+                           <div class="modal-header p13">
+                               <h5 class="modal-title p8 p1">resistration details</h5>
+                               <button class="btn-close" data-bs-dismiss="modal"></button>
+                           </div>
+                           <div class="modal-body p16">
+                            <form id="registrationForm" onsubmit="return validateForm()">
+                              <label for="name">Full Name:</label>
+                              <input type="text" id="name" name="name" required>
+                                <br>
+                              <label for="email">Email:</label>
+                              <input type="email" id="email" name="email" required>
+                              <br>
+                              <label for="password">Password:</label>
+                              <input type="password" id="password" name="password" required>
+                              <br>
+                              <label for="confirm_password">Confirm Password:</label>
+                              <input type="password" id="confirm_password" name="confirm_password" required>
+                              <br><br>
+                              <button type="submit" class="m-3 btn btn-info">Register</button>
+                              <p id="error-message" class="error-message"></p>
+                            </form>
+                            </div>
+                            <script src="rasistration.js"></script>
+                           
+                           <div class="modal-footer p13">
+                               <button class="btn btn-info" data-bs-dismiss="modal">close</button>
+                           </div>
+                          </div>
+                       </div>
+                   </div>
+  </li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+
+  <div class="tab-content container mt-4 ">
+    <div class="tab-pane fade show active " id="item1" >
+        <div >
+            <div>
+            <h2 class="p1 p7">WELCOME TO APMC</h2>
+            
+            <br><br>
+            <h1 class="p1 p8 ">Agricultural Produce Market Committee</h1>
+        </div><br><br><br>
+        <div id="demo" class="carousel slide " data-bs-ride="carousel" id="p1">
+          <!-- <div class="carousel-indicators">
+              <button data-bs-target="#demo" data-bs-slide-to="0" class="active bg-warning"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="1" class="bg-success"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="2" class="bg-warning"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="3" class="bg-warning"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="4" class="bg-warning"></button>
+              <button data-bs-target="#demo" data-bs-slide-to="5" class="bg-warning"></button>
+          </div> -->
+          <div class="carousel-inner" align="center">
+      <div class="carousel-item active"><img src="apmcphoto/i1.png" style="height:400px;width: 70%;" ></div>
+      <div class="carousel-item"><img src="apmcphoto/i2.jpg" style="height:400px;width:70%;" ></div>
+      <div class="carousel-item"><img src="apmcphoto/i3.jpg" style="height:400px;width:70%;" ></div>
+      <div class="carousel-item"><img src="apmcphoto/i4.jpg" style="height:400px;width: 70%;" ></div>
+      <div class="carousel-item"><img src="apmcphoto/i5.jpg" style="height:400px;width: 70%;" ></div>
+      <div class="carousel-item"><img src="apmcphoto/i6.jpg" style="height:400px;width: 70%;" ></div>
+          </div>
+          <button class="carousel-control-prev " data-bs-target="#demo" data-bs-slide="prev" style="width: 80px;">
+              <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next " data-bs-target="#demo" data-bs-slide="next" style="width: 80px;">
+              <span class="carousel-control-next-icon"></span>
+          </button>
+         </div>
+         <br><br>
+         <div class="row">
+         <div class="p19 p22 col-sm-6">
+            <h2 class="p8" align="center">Empowering Agricultural Growth</h2>
+            <P>At APMC, we are dedicated to bridging the gap between farmers, traders, and consumers by creating an efficient and transparent marketplace for agricultural produce. Our mission is to support the farming community, promote fair trade practices, and ensure the highest quality standards in the distribution of farm produce.</P>
+          </div><br><br>
+          <div class="p20 p22 col-sm-6">
+            <h2 class="p8" align="center">Our Vision</h2>
+            <P>To create a sustainable and thriving agricultural ecosystem that benefits all stakeholders by fostering innovation, efficiency, and transparency in the marketing of agricultural commodities.</P>
+          </div>
+        </div>
+        <div class="row">
+          <div class="p20 p22 col-sm-6">
+             <h2 class="p8" align="center">What We Offer</h2>
+              <p>Farmers: Access to a reliable platform for selling produce at competitive prices.</p>
+              <p> Traders: A robust marketplace for sourcing fresh, high-quality agricultural products.</p>
+              <p>Consumers: Assurance of quality, availability, and fair pricing.</p>
+           </div><br><br>
+           <div class="p19 p22 col-sm-6">
+             <h2 class="p8" align="center">Key Features</h2>
+             <p>1. Transparent Pricing: Get real-time market rates for various agricultural commodities.</p>
+             <p>2. Digital Marketplace: A seamless online platform for transactions.</p>
+             <p>3. Regulated Operations: Ensuring fair trade and standardization across the board.</p>
+             <p>4. Market Insights: Comprehensive analytics and reports for better decision-making.</p>
+           </div>
+         </div>
+         <div class="row">
+          <div class="p19 p22 col-sm-6">
+             <h2 class="p8" align="center">Why Choose APMC?</h2>
+             <p>1. Trusted by thousands of farmers and traders.</p>
+             <p>2. Transparent and efficient trading practices.</p>
+            <p>3. Support for sustainable agricultural practices.</p>
+             <p>4. Commitment to rural and economic development. </p>
+           </div><br><br>
+           <div class="p20 p22 col-sm-6">
+              <h2 class="p8" align="center">Latest Updates</h2>
+              <p>[Market Rates Today]: Check the latest prices for top commodities.</p>
+              <p>[Upcoming Events]: Join our farmer training and trade fairs.</p>
+              <p>[New Initiatives]: Discover our sustainability and tech-driven projects.</p>
+           </div>
+         </div>
+        </div>
+    </div>
+
+    <!-- market Rates -->
+    <div class="tab-pane fade" id="item2" >
+        <h2 class="p1 p8"> daily Market Rates</h2><br>
+        <div  style="background-color: rgb(22, 245, 7)">
+        <div class="p11  p-5" >
+        <div id="accordion">
+          <div class="card">
+          <div class="card-header p13 p18">
+              <a href="#c1" class="card-link p1" data-toggle="collapse">APMC GONDAL</a>
+          </div>
+          <div id="c1" class="collapse show p17" data-parent="#accordion">
+          <div class="card-body p4" align="center">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQMpwMvRjRzTYqS7k0z4UOohyv8-q2s-odUJEunXC1XwyPZbXmDrM873nqzEu7FmAIEQZIO-pXbML4Q/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+          </div>
+      </div>
+      </div>
+      <div class="card">
+      <div class="card-header p13 p18">
+          <a href="#c2" class="card-link p1" data-toggle="collapse">APMC JETPUR</a>
+      </div>
+      <div id="c2" class="collapse p17  " data-parent="#accordion">
+      <div class="card-body p4"align="center">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vThoqFreU2HICpigUt8XsT7H2Qd0Q0NZpaAkl8JjpyB9zkmXBGQDJJw_lHgdHi6THBlTGM3IWpnmpyu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+      </div>
+      </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header p13 p18">
+            <a href="#c3" class="card-link p1" data-toggle="collapse">APMC junagadh</a>
+        </div>
+        <div id="c3" class="collapse p17 " data-parent="#accordion">
+        <div class="card-body p4"align="center">	
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTtzS-TZsreAoA_b7EyvGhMd5cQNGIwHxwPQIHXel_coe066V7z8O-bNEejYPlvZKM-MREw5RtyuWB8/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+          <div class="card-header p13 p18">
+              <a href="#c4" class="card-link p1" data-toggle="collapse">APMC rajkot</a>
+          </div>
+          <div id="c4" class="collapse p17 " data-parent="#accordion">
+         <div class="card-body p4"align="center">	
+          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRWLGfaBDCkib8GWgMsaGV51TGwUTzEqwSelAGnYSlKtuoyuB0kJKyMweJcUSJfePyBLnDaqoqt8cgo/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+         </div>
+          </div>
+          </div> 
+          <div class="card">
+            <div class="card-header p13 p18">
+                <a href="#c5" class="card-link p1" data-toggle="collapse">APMC talaja</a>
+            </div>
+            <div id="c5" class="collapse p17 " data-parent="#accordion">
+           <div class="card-body p4"align="center">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRtOtHWhbCWZTawklO4rG2zcDSGBnXilXFRQxO-0O6gp1ztStZWqhYRGrAc55f7Tke5RpMNzK4dJYG/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+           </div>
+            </div>
+            </div> 
+  
+            <div class="card">
+              <div class="card-header p13 p18">
+                  <a href="#c6" class="card-link p1" data-toggle="collapse">APMC jamnagar</a>
+              </div>
+              <div id="c6" class="collapse p17 " data-parent="#accordion">
+             <div class="card-body p4"align="center">
+              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRRFIk8-0mnRr_26-IaB0m4M0pV1zkRlo104DSVb6aHtYw31BOPTZuhRGXwrn75etpRnLq1eulB5f9I/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+             </div>
+              </div>
+              </div> 
+  
+              <div class="card">
+                <div class="card-header p13 p18">
+                    <a href="#c7" class="card-link p1" data-toggle="collapse">APMC morbi</a>
+                </div>
+                <div id="c7" class="collapse p17 " data-parent="#accordion">
+               <div class="card-body p4"align="center">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSXWHpGHSTBRkd4T9Iw4pFWbOdilgcrNY1JGrQOOOmmW7rkuNzVjJd2EBex0txgNRaOkcJwl7BPeWbz/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+    
+               </div>
+                </div>
+                </div> 
+  
+                <div class="card">
+                  <div class="card-header p13 p18">
+                      <a href="#c8" class="card-link p1" data-toggle="collapse">APMC halvad</a>
+                  </div>
+                  <div id="c8" class="collapse p17 " data-parent="#accordion">
+                 <div class="card-body p4"align="center">
+                  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSq1Mp7XrzM0vtzZHfl91lrro0xAuGFtnc842eP_w84lYINke2vEm3GpS76evvPRuRZGPU5d0XrwiZB/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+      
+                 </div>
+                  </div>
+                  </div> 
+
+                  <div class="card">
+                    <div class="card-header p13 p18">
+                        <a href="#c9" class="card-link p1" data-toggle="collapse">APMC botad</a>
+                    </div>
+                    <div id="c9" class="collapse p17 " data-parent="#accordion">
+                   <div class="card-body p4"align="center">
+                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQF2jzBHUKpMEEXc0hOhEtER3ZNPSNJ-jCUrUbhei1zpSm3xighgCtfAS7XdK54ntaaXpwHmyJedY52/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+        
+                   </div>
+                    </div>
+                    </div> 
+
+                    <div class="card">
+                      <div class="card-header p13 p18">
+                          <a href="#c10" class="card-link p1" data-toggle="collapse">APMC patdi</a>
+                      </div>
+                      <div id="c10" class="collapse p17 " data-parent="#accordion">
+                     <div class="card-body p4"align="center">
+                      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQGmEkjB7OeIcANUIupUdY3FJB3_pHcCbe3f4pHpUCPKrPC0GoCkH9pMopZj14ASbo9-M2VuxW5Ffls/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+                     </div>
+                      </div>
+                      </div> 
+        
+                      <div class="card">
+                        <div class="card-header p13 p18">
+                            <a href="#c11" class="card-link p1" data-toggle="collapse">APMC kodinar</a>
+                        </div>
+                        <div id="c11" class="collapse p17 " data-parent="#accordion">
+                       <div class="card-body p4"align="center">
+                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSr7Pb8PLpF8Qh_IlXdwoo9xi8p8tLCwMq9AbUM0uzBrA1_cXSZQpgal5w5P2buCfFaq48NhelT3FXh/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                       </div>
+                        </div>
+                        </div> 
+        
+                        <div class="card">
+                          <div class="card-header p13 p18">
+                              <a href="#c12" class="card-link p1" data-toggle="collapse">APMC Bhavnagar</a>
+                          </div>
+                          <div id="c12" class="collapse p17 " data-parent="#accordion">
+                         <div class="card-body p4"align="center">
+                          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQOGh07CqVkHxXF7e-uzO0QzGX9kROaTxqUB93qks-KgVTVSA-6ojb5-a3skHtHu8d95aAGFkYUFmD-/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                         </div>
+                          </div>
+                          </div> 
+        
+                          <div class="card">
+                            <div class="card-header p13 p18">
+                                <a href="#c13" class="card-link p1" data-toggle="collapse">APMC AMRELI</a>
+                            </div>
+                            <div id="c13" class="collapse p17 " data-parent="#accordion">
+                           <div class="card-body p4"align="center">
+                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSK7zZWDVR_MQ3H4uYl-a28ReAr2DRP-9pfDaRh1iPoRl3yu56JL8W58uSoZV48L4BZlH2WUfmnC9_O/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+                
+                           </div>
+                            </div>
+                            </div> 
+
+                            <div class="card">
+                              <div class="card-header p13 p18">
+                                  <a href="#c14" class="card-link p1" data-toggle="collapse">APMC DHROL</a>
+                              </div>
+                              <div id="c14" class="collapse p17 " data-parent="#accordion">
+                             <div class="card-body p4"align="center">
+                              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTFXsksTwwEym717UuZz61OGgRa-j6MtVgQzBPi9kma8v_74cm4AAspkiHwXMWSp9bOaZIwMsc9EhS_/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                             </div>
+                              </div>
+                              </div> 
+
+                              <div class="card">
+                                <div class="card-header p13 p18">
+                                    <a href="#c15" class="card-link p1" data-toggle="collapse">APMC mahuva</a>
+                                </div>
+                                <div id="c15" class="collapse p17 " data-parent="#accordion">
+                               <div class="card-body p4"align="center">
+                                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR8bFPjrYq9tsyMcQcq60zqQMZBC8TuOWTkfqXSOcVFbGzuK-qQDBDuw2lfjyNBCv30kxeteSMKZvjT/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                               </div>
+                                </div>
+                                </div> 
+
+                                <div class="card">
+                                  <div class="card-header p13 p18">
+                                      <a href="#c16" class="card-link p1" data-toggle="collapse">APMC JAMJODHPUR</a>
+                                  </div>
+                                  <div id="c16" class="collapse p17 " data-parent="#accordion">
+                                 <div class="card-body p4"align="center">
+                                  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRwn0BZaiu5R-Kw3adEDtvg_cvil1eqcLoyj_FSVgSkNj1LemBM53g5CqBBkZDg8b-qcjAVqa5MMGlJ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+                      
+                                 </div>
+                                  </div>
+                                  </div> 
+
+                                  <div class="card">
+                                    <div class="card-header p13 p18">
+                                        <a href="#c17" class="card-link p1" data-toggle="collapse">APMC visavadar</a>
+                                    </div>
+                                    <div id="c17" class="collapse p17 " data-parent="#accordion">
+                                   <div class="card-body p4"align="center">
+                                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR84d-NwFNWX3RWTwlBKEo0EwYLy7yANGWTLFFp0EV0S4VnWTZ4SNuSjj8gPzR3Y2gWW_hqnmeOM0IP/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                   </div>
+                                    </div>
+                                    </div> 
+
+                                    <div class="card">
+                                      <div class="card-header p13 p18">
+                                          <a href="#c18" class="card-link p1" data-toggle="collapse">APMC porbandar</a>
+                                      </div>
+                                      <div id="c18" class="collapse p17 " data-parent="#accordion">
+                                     <div class="card-body p4"align="center">
+                                      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6x8zdRNeIlQrlST8p8LqqPHVW1Bcc87kfAO3wNVKMbZfpzJL-oN3sZr_GDxWG6ll0HQOhKAa7Gka0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                     </div>
+                                      </div>
+                                      </div> 
+
+                                      <div class="card">
+                                        <div class="card-header p13 p18">
+                                            <a href="#c19" class="card-link p1" data-toggle="collapse">APMC jasdan</a>
+                                        </div>
+                                        <div id="c19" class="collapse p17 " data-parent="#accordion">
+                                       <div class="card-body p4"align="center">
+                                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQXwI7drVPMiRO1l1pxgYjikUHxe9DjSzVtgIfavEIvrdYm30cCTR8cZiiwRGhbqSC3QfoobFlATIb/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                       </div>
+                                        </div>
+                                        </div> 
+
+                                        <div class="card">
+                                          <div class="card-header p13 p18">
+                                              <a href="#c20" class="card-link p1" data-toggle="collapse">APMC kalavad</a>
+                                          </div>
+                                          <div id="c20" class="collapse p17 " data-parent="#accordion">
+                                         <div class="card-body p4"align="center">
+                                          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vReweyyN-3QHWR_0Vu_LuMBgNq-DdaX6FC2eJ_k1YxWKtIKBXVYxeOWftULUFk7kylWZ7w2yI9lV57q/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                         </div>
+                                          </div>
+                                          </div> 
+
+                                          <div class="card">
+                                            <div class="card-header p13 p18">
+                                                <a href="#c21" class="card-link p1" data-toggle="collapse">APMC veraval</a>
+                                            </div>
+                                            <div id="c21" class="collapse p17 " data-parent="#accordion">
+                                           <div class="card-body p4"align="center">
+                                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vREw-FLMXRxqu48ZAkcRBp8yHWUuoR4xfpKzJoCcvzvjBE7bM4T-x-J40WlRmscsJ9_3_PN-Xs-oaNQ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                           </div>
+                                            </div>
+                                            </div> 
+
+                                            <div class="card">
+                                              <div class="card-header p13 p18">
+                                                  <a href="#c22" class="card-link p1" data-toggle="collapse">APMC MENdarda</a>
+                                              </div>
+                                              <div id="c22" class="collapse p17 " data-parent="#accordion">
+                                             <div class="card-body p4"align="center">
+                                              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRZvitRyFeoPf_1zfIV90SeQbtRHrgMLn8IT20L6RUNjt7gunCqiPE3HJ6JEZWacaAAUXL8vYuribwc/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+                                             </div>
+                                              </div>
+                                              </div> 
+
+                                              <div class="card">
+                                                <div class="card-header p13 p18">
+                                                    <a href="#c23" class="card-link p1" data-toggle="collapse">APMC dhoraji</a>
+                                                </div>
+                                                <div id="c23" class="collapse p17 " data-parent="#accordion">
+                                               <div class="card-body p4"align="center">
+                                                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQaKiBEmrWwauHgSZmJZsUFhrNUKPS0Hd62LDL5vGMNy_Q-94A5yc2sfDRGR8TJ91GTvcsSaeHxrC1v/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe></div>
+
+                                               </div>
+                                                </div>
+                                                </div> 
+
+                                                <div class="card">
+                                                  <div class="card-header p13 p18">
+                                                      <a href="#c24" class="card-link p1" data-toggle="collapse">APMC upleta</a>
+                                                  </div>
+                                                  <div id="c24" class="collapse p17 " data-parent="#accordion">
+                                                 <div class="card-body p4"align="center">
+                                                  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRfOgcHlhUuOHurBKupwhnWqQuOMMwmtSeuAfCviFFJIG0gNn9niJ83hWzYfuXWegmg93juoEB4F48O/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 450px; width: 340px;"></iframe></div>
+
+                                                 </div>
+                                                </div>
+
+                                                  <div class="card">
+                                                    <div class="card-header p13 p18">
+                                                        <a href="#c25" class="card-link p1" data-toggle="collapse">APMC palitana</a>
+                                                    </div>
+                                                    <div id="c25" class="collapse p17 " data-parent="#accordion">
+                                                   <div class="card-body p4"align="center">
+                                                    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSx_sXekEoukntkjKuRDQlXtb1miPmdwnfFoIYDc9dXzARwKOekXgzFkI_BTlGIq7tE6GmEBtl9LbwQ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe></div>
+
+                                                   </div>
+                                                    </div>
+                                                     
+
+                                                    <div class="card">
+                                                      <div class="card-header p13 p18">
+                                                          <a href="#c26" class="card-link p1" data-toggle="collapse">APMC rajula</a>
+                                                      </div>
+                                                      <div id="c26" class="collapse p17 " data-parent="#accordion">
+                                                     <div class="card-body p4"align="center">
+                                                      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTBNIb33Ry1jR5M1mM8zDUPt5UThVtk2nsRGJVlrLDG5QP6uLL9JNezbHrCuIwJx-um_O3tUR_rAYMb/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                                     </div>
+                                                      </div>
+                                                       
+
+                                                      <div class="card">
+                                                        <div class="card-header p13 p18">
+                                                            <a href="#c27" class="card-link p1" data-toggle="collapse">APMC dhari</a>
+                                                        </div>
+                                                        <div id="c27" class="collapse p17 " data-parent="#accordion">
+                                                       <div class="card-body p4"align="center">
+                                                        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5bMQBKKZVFzoVQkXeX_nXAKJDDmMTXkkGw6mQ-R4HdlqNJZVVvw5Wp2NdTajwJQHjkKrAqxcQdCEr/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                                       </div>
+                                                        </div>
+                                                        </div> 
+
+                                                        <div class="card">
+                                                          <div class="card-header p13 p18">
+                                                              <a href="#c28" class="card-link p1" data-toggle="collapse">APMC bhesan</a>
+                                                          </div>
+                                                          <div id="c28" class="collapse p17 " data-parent="#accordion">
+                                                         <div class="card-body p4"align="center">
+                                                          <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT08Iviyp4JMa5oSf61iYvztwpSjpLdpLPCw6LVC7tTI_lmVCWcMM1stfgUa1hwsWdactWikCV4GOA0/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                                         </div>
+                                                          </div>
+                                                          </div> 
+                                                          <div class="card">
+                                                            <div class="card-header p13 p18">
+                                                                <a href="#c29" class="card-link p1" data-toggle="collapse">APMC talala-gir</a>
+                                                            </div>
+                                                            <div id="c29" class="collapse p17 " data-parent="#accordion">
+                                                           <div class="card-body p4"align="center">
+                                                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT7fymN8yc8PW_GLR3sLqjfIdwt4qE_NkMppJTd1wb4bDxK7Giz4qTRc1QyS4g41Ayoi_yJgf7OJy_w/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 270px; width: 340px;"></iframe>
+
+                                                           </div>
+                                                            </div>
+                                                            </div> 
+                                                            <div class="card">
+                                                              <div class="card-header p13 p18">
+                                                                  <a href="#c28" class="card-link p1" data-toggle="collapse">APMC Bagasara</a>
+                                                              </div>
+                                                              <div id="c28" class="collapse p17 " data-parent="#accordion">
+                                                             <div class="card-body p4"align="center">
+                                                              <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQu4jRQK_HC48CAnLkxKGumcKYdVXZRDz9uUwoEe70W_3Ju6lhxHX_RDtbJwFA-6wGHcPy6hMEiN5q3/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" style="height: 486px; width: 340px;"></iframe>
+
+                                                             </div>
+                                                              </div>
+                                                              </div> 
+                      
+        
+      </div>
+      </div>
+        </div>
+    </div>
+
+    <!-- auction -->
+    <div class="tab-pane fade" id="item3">
+      <h2 class="p8 p1">Auction Details</h2>
+          <br><br>
+        <table border="1" width="100%" cellpadding="10" class="p10 table-bordered table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>Auction ID</th>
+                    <th>Commodity</th>
+                    <th>Date</th>
+                    <th>Starting Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>APMC001</td>
+                    <td>Wheat</td>
+                    <td>2025-02-25</td>
+                    <td>₹1,800 per Quintal</td>
+                    <td>Open</td>
+                </tr>
+                <tr>
+                    <td>APMC002</td>
+                    <td>Rice</td>
+                    <td>2025-02-28</td>
+                    <td>₹2,200 per Quintal</td>
+                    <td>Open</td>
+                </tr>
+                <tr>
+                    <td>APMC003</td>
+                    <td>Cotton</td>
+                    <td>2025-03-02</td>
+                    <td>₹6,000 per Quintal</td>
+                    <td>Upcoming</td>
+                </tr>
+                <tr>
+                  <td>APMC004</td>
+                  <td>Barley</td>
+                  <td>2025-03-05</td>
+                  <td>₹1,500 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC005</td>
+                  <td>Mustard</td>
+                  <td>2025-03-10</td>
+                  <td>₹4,000 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC006</td>
+                  <td>Chickpeas</td>
+                  <td>2025-03-12</td>
+                  <td>₹3,200 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC007</td>
+                  <td>Millets</td>
+                  <td>2025-03-15</td>
+                  <td>₹2,800 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC008</td>
+                  <td>Oats</td>
+                  <td>2025-03-18</td>
+                  <td>₹2,500 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC009</td>
+                  <td>Peas</td>
+                  <td>2025-03-20</td>
+                  <td>₹3,000 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC010</td>
+                  <td>Groundnuts</td>
+                  <td>2025-03-22</td>
+                  <td>₹5,500 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC011</td>
+                  <td>Potatoes</td>
+                  <td>2025-03-25</td>
+                  <td>₹1,000 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC012</td>
+                  <td>Onions</td>
+                  <td>2025-03-28</td>
+                  <td>₹1,200 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC013</td>
+                  <td>Tomatoes</td>
+                  <td>2025-04-01</td>
+                  <td>₹1,500 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC014</td>
+                  <td>Garlic</td>
+                  <td>2025-04-03</td>
+                  <td>₹3,500 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC015</td>
+                  <td>Ginger</td> 
+                  <td>2025-04-05</td>
+                  <td>₹4,200 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC016</td>
+                  <td>Carrots</td>
+                  <td>2025-04-08</td>
+                  <td>₹1,800 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC017</td>
+                  <td>Spinach</td>
+                  <td>2025-04-10</td>
+                  <td>₹1,600 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC018</td>
+                  <td>Cauliflower</td>
+                  <td>2025-04-12</td>
+                  <td>₹1,900 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC019</td>
+                  <td>Broccoli</td>
+                  <td>2025-04-15</td>
+                  <td>₹2,100 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC020</td>
+                  <td>Bell Peppers</td>
+                  <td>2025-04-18</td>
+                  <td>₹2,400 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC021</td>
+                  <td>Eggplant</td>
+                  <td>2025-04-20</td>
+                  <td>₹2,300 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC022</td>
+                  <td>Radishes</td>
+                  <td>2025-04-22</td>
+                  <td>₹1,700 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC023</td>
+                  <td>Sweet Potatoes</td>
+                  <td>2025-04-25</td>
+                  <td>₹1,900 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC024</td>
+                  <td>Yams</td>
+                  <td>2025-04-28</td>
+                  <td>₹2,000 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC025</td>
+                  <td>Beetroots</td>
+                  <td>2025-05-01</td>
+                  <td>₹1,800 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC026</td>
+                  <td>Turnips</td>
+                  <td>2025-05-03</td>
+                  <td>₹1,600 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC027</td>
+                  <td>Asparagus</td>
+                  <td>2025-05-05</td>
+                  <td>₹3,000 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC028</td>
+                  <td>Artichokes</td>
+                  <td>2025-05-08</td>
+                  <td>₹3,200 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                  <td>APMC029</td>
+                  <td>Fennel</td>
+                  <td>2025-05-10</td>
+                  <td>₹2,500 per Quintal</td>
+                  <td>Upcoming</td>
+              </tr>
+              <tr>
+                  <td>APMC030</td>
+                  <td>Leeks</td>
+                  <td>2025-05-12</td>
+                  <td>₹2,700 per Quintal</td>
+                  <td>Open</td>
+              </tr>
+              <tr>
+                <td>APMC031</td>
+                <td>Quinoa</td>
+                <td>2025-05-15</td>
+                <td>₹5,000 per Quintal</td>
+ <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC032</td>
+                <td>Rye</td>
+                <td>2025-05-18</td>
+                <td>₹2,600 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC033</td>
+                <td>Sorghum</td>
+                <td>2025-05-20</td>
+                <td>₹2,300 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC034</td>
+                <td>Flaxseed</td>
+                <td>2025-05-22</td>
+                <td>₹3,800 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC035</td>
+                <td>Sesame</td>
+                <td>2025-05-25</td>
+                <td>₹4,500 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC036</td>
+                <td>Sunflower Seeds</td>
+                <td>2025-05-28</td>
+                <td>₹3,200 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC037</td>
+                <td>Peanuts</td>
+                <td>2025-06-01</td>
+                <td>₹5,000 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC038</td>
+                <td>Walnuts</td>
+                <td>2025-06-03</td>
+                <td>₹8,000 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC039</td>
+                <td>Almonds</td>
+                <td>2025-06-05</td>
+                <td>₹9,500 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC040</td>
+                <td>Pistachios</td>
+                <td>2025-06-08</td>
+                <td>₹10,000 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC041</td>
+                <td>Cashews</td>
+                <td>2025-06-10</td>
+                <td>₹7,500 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC042</td>
+                <td>Hazelnuts</td>
+                <td>2025-06-12</td>
+                <td>₹8,500 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC043</td>
+                <td>Chestnuts</td>
+                <td>2025-06-15</td>
+                <td>₹6,000 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC044</td>
+                <td>Macadamia Nuts</td>
+                <td>2025-06-18</td>
+                <td>₹12,000 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC045</td>
+                <td>Brazil Nuts</td>
+                <td>2025-06-20</td>
+                <td>₹11,000 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC046</td>
+                <td>Green Beans</td>
+                <td>2025-06-22</td>
+                <td>₹2,200 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC047</td>
+                <td>Kidney Beans</td>
+                <td>2025-06-25</td>
+                <td>₹2,500 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC048</ td>
+                <td>Lentils</td>
+                <td>2025-06-28</td>
+                <td>₹3,000 per Quintal</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>APMC049</td>
+                <td>Black Beans</td>
+                <td>2025-07-01</td>
+                <td>₹2,800 per Quintal</td>
+                <td>Upcoming</td>
+            </tr>
+            <tr>
+                <td>APMC050</td>
+                <td>White Beans</td>
+                <td>2025-07-03</td>
+                <td>₹2,900 per Quintal</td>
+                <td>Open</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- contact details  -->
+    <div class="tab-pane fade" id="item4">
+      
+    <div class="container">
+      <h1 class="p1 p8">Contact Us</h1>
+  </div>
+
+  <div class="details-container">
+      <h2>Contact Details</h2>
+      <p><strong>Address:</strong> Apmc, Ahmedabad,Gujrat,India</p>
+      <p><strong>Phone:</strong> (079)-25323634 </p>
+      <p><strong>Email:</strong> apmcwebsite@gmail.com</p>
+  </div>
+  <br>
+  <div class="row  bg-dark text-light ">
+    <div class="col-sm-3 p-2">
+      <img src="apmcphoto/whatsapp.jpg" alt="" height="100px" width="100px"><br><br>
+      <p>+91 9017545133</p>
+    </div>
+    <div class="col-sm-3 p-2">
+      <img src="apmcphoto/facebook.jpg" alt="" height="100px" width="100px"><br><br>
+      <p>apmcwebsite_info</p>
+    </div>
+    <div class="col-sm-3 p-2">
+      <img src="apmcphoto/instagram.jpg" alt="" height="100px" width="100px"><br><br>
+      <p>apmc_website</p>
+    </div>
+    <div class="col-sm-3 p-2">
+      <img src="apmcphoto/x.jpg" alt="" height="100px" width="100px"><br><br>
+      <p>apmc_website_news</p>
+    </div>
+  </div>
+  <br><br>
+    </div>
+  
+    <div class="tab-pane fade p13 " id="item5">
+        <div class="p21">
+        <h2 class="p8 p1">APMC LIST OF GUJRAT</h2>
+      </div>
+      <div class="p21">
+          <table class="table table-striped table-bordered  ">
+              <tr>
+                <th>Sr No</th>
+                <th>Name of APMC</th>
+                <th>First Line (Address of APMC)</th>
+                <th>Name of Village</th>
+                <th>Tehsil (Taluka)</th>
+                <th>District</th>
+                <th>State</th>
+                <th>Pincode</th>
+                <th>Category </th>
+                <th>Commodity traded in Market</th>
+                <th>Name of APMC Secretary</th>
+                <th>Land Line Number</th>
+                <th>Mobile No.</th>
+                <th>email of APMC</th>
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8">APMCS OF MAHISAGAR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>lunawada</td>
+                <td>Santarampur road, lunawada</td>
+                <td>lunawada</td>
+                <td>lunawada</td>
+                <td>Mahisagar</td>
+                <td>Gujarat</td>
+                <td>389230</td>
+                <td>Primary Market Yard</td>
+                <td>Paddy, maize, wheat, millet, tuvar, gram</td>
+                <td>Sagarbhai patel</td>
+                <td>-</td>
+                <td>9979988878</td>
+                <td>apmclunawada@gmail.com</td>
+              <tr>
+                <td>2</td>
+                <td>Virpur</td>
+                <td>in front c.m.desai high school, virpur</td>
+                <td>virpur</td>
+                <td>virpur</td>
+                <td>Mahisagar</td>
+                <td>Gujarat</td>
+                <td>388260</td>
+                <td>Primary Market Yard</td>
+                <td>Paddy, maize, wheat, millet, soybean, raydo, castor</td>
+                <td>Pranavbhai patel</td>
+                <td>-</td>
+                <td>9428151937</td>
+                <td>pranavapmc@gmail.com</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td >balasinor</td>
+                <td >virpur road balasinor</td>
+                <td >Balasinor</td>
+                <td >Balasinor</td>
+                <td >Mahisagar</td>
+                <td >Gujarat</td>
+                <td >388255</td>
+                <td >Primary Market Yard</td>
+                <td >paddy,cotton,castor,</td>
+                <td >Ketulbhai Patel</td>
+                <td >-</td>
+                <td >9427853720</td>
+                <td >apmcbalasinor@gmail.com</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Santrampur</td>
+                <td>Tower road Santarampur</td>
+                <td>Santarampur</td>
+                <td>Santarampur</td>
+                <td>Mahisagar</td>
+                <td>Gujarat</td>
+                <td>389260</td>
+                <td>Primary Market Yard</td>
+                <td>Whete, maize, Paddy, Gram</td>
+                <td>Maksudbhai Daud</td>
+                <td>-</td>
+                <td>7698171424</td>
+                <td>apmcsant@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Khanpur</td>
+                <td>At.po.Limadiya, ta.Khanpur</td>
+                <td>Khanpur</td>
+                <td>Khanpur</td>
+                <td>Mahisagar</td>
+                <td>Gujarat</td>
+                <td>389230</td>
+                <td>Primary Market Yard</td>
+                <td>Whete, maize, Paddy, Gram, Tuvar, millet</td>
+                <td>Nitinbhai Patel</td>
+                <td>-</td>
+                <td>9925654782</td>
+                <td>nitinpatel869@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td >Kadana</td>
+                <td >Santarampur road, kadana</td>
+                <td >Kadana</td>
+                <td >Kadana</td>
+                <td >Mahisagar</td>
+                <td >Gujarat</td>
+                <td >389250</td>
+                <td >no market</td>
+                <td >Whete, maize, Paddy, Gram</td>
+                <td >Asfakbhai Akhali</td>
+                <td >-</td>
+                <td >8140536354</td>
+                <td >-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8">APMCS OF KUTCH DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Bhuj</td>
+                <td>Market Yard,Suralbhit Road,Bhuj-Kutch</td>
+                <td>Bhuj</td>
+                <td>Bhuj</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370001</td>
+                <td>Primary Market</td>
+                <td>Grain,Pulses and spices</td>
+                <td>Mr.S.S.Barariya</td>
+                <td>-</td>
+                <td>9879360142</td>
+                <td>apmcbhuj@yahoo.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Anjar</td>
+                <td>Market Yard,Varsamedi Naka Bahar,Anjar-Kutch</td>
+                <td>Anjar</td>
+                <td>Anjar</td>
+                <td> </td>
+                <td>Gujarat</td>
+                <td>370110</td>
+                <td>Primary Market</td>
+                <td>Grain,Pulses and spices</td>
+                <td>Mr.Muljibhai Myatra</td>
+                <td>-</td>
+                <td>9712944058</td>
+                <td>apmcanjar9@gmail.com</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bhachau</td>
+                <td>Market yard,Near new Bus station,Bhachau-Kutch</td>
+                <td>Bhachau</td>
+                <td>Bhachau</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370140</td>
+                <td>Primary Market</td>
+                <td>Grains and Pulses</td>
+                <td>Mr.Bharatbhai Thacker</td>
+                <td>-</td>
+                <td>9825254848</td>
+                <td>apmcbhachau@gmail.com</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Rapar</td>
+                <td>Market Yard,nandasar Pragapar Ring Road, Rapar-Kutch</td>
+                <td>Rapar</td>
+                <td>Rapar</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370165</td>
+                <td>Primary Market</td>
+                <td>Grain,Pulses and Vegetables</td>
+                <td>Mr.Shankarbhai Pujara</td>
+                <td>-</td>
+                <td>9879087700</td>
+                <td>apmcrapar@rediffmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Mandvi</td>
+                <td>Market Yard, Highway Road ,Gala Nagar,Mandvi-Kutch</td>
+                <td>Mandvi</td>
+                <td>Mandvi</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370465</td>
+                <td>Primary Market</td>
+                <td>Grains</td>
+                <td>Mr.Pareshbhai Chopra</td>
+                <td>-</td>
+                <td>9428567601</td>
+                <td>apmc.mandvi@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Mundra</td>
+                <td>Market Yard,Nana Kapaya,Mundra-Kutch</td>
+                <td>Mundra</td>
+                <td>Mundra</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370421</td>
+                <td>Primary Market</td>
+                <td>Grains and Pulses</td>
+                <td>Mr.Gulabsinh Jadeja</td>
+                <td>-</td>
+                <td>9909525905</td>
+                <td>apmcmundra@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Nakhatrana</td>
+                <td>Shiv-Shakti Plaza,Office no.06,First Floor,Opp Bus station,Nakhatrana-Kutch</td>
+                <td>Nakhatrana</td>
+                <td>Nakhatrana</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370615</td>
+                <td>Primary Market</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Abdasa</td>
+                <td>Naliya-Mandvi Highway Road,Kothara-Abdasa</td>
+                <td>Kothara</td>
+                <td>Abdasa</td>
+                <td>Kutch</td>
+                <td>Gujarat</td>
+                <td>370511</td>
+                <td>Primary Market</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF ANAND DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>umreth</td>
+                <td>Market yard oad bazar umreth</td>
+                <td>umreth</td>
+                <td>umreth</td>
+                <td>Anand</td>
+                <td>Gujarat</td>
+                <td>388220</td>
+                <td>Primary Market</td>
+                <td>Grain, seeds</td>
+                <td>Maheshbhai dhobi</td>
+                <td>2692276024</td>
+                <td>9879025159</td>
+                <td>apmcumreth@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>sojitra</td>
+                <td>S-23, Sardar Shoping Center, Sojitra.</td>
+                <td>Sojitra</td>
+                <td>Sojitra</td>
+                <td>Anand</td>
+                <td>Gujarat</td>
+                <td>387240</td>
+                <td>No Market Yard in Sojitra APMC.</td>
+                <td>No</td>
+                <td>Bhaveshbhai F Patel</td>
+                <td>No</td>
+                <td>9714074748</td>
+                <td>sojitraapmc.apmc@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Tarapur</td>
+                <td>Khambhat-Tarapur road,nani chokdi,marketyard</td>
+                <td>Tarapur</td>
+                <td>Tarapur</td>
+                <td>Anand</td>
+                <td>Gujarat</td>
+                <td>388180</td>
+                <td>Primary market yard</td>
+                <td>Grain,Pulses, Cereals,Oil seeds</td>
+                <td>incharge Nilesh N. Belani</td>
+                <td>-</td>
+                <td>9998597984</td>
+                <td>apmctarapur@gmail.com</td>
+                
+                </tr>
+              <tr>
+                <td>4</td>
+                <td>ANAND</td>
+                <td>Behind Sardar Ganj,market yard ,Anand</td>
+                <td>Anand</td>
+                <td>Anand</td>
+                <td>Anand</td>
+                <td>Gujarat</td>
+                <td>388001</td>
+                <td>Primary Market yard,SMY-3</td>
+                <td>Grain,Pulses, Vegetables,Oil seeds</td>
+                <td>Priteshkumar J Parmar</td>
+                <td>02692-259343</td>
+                <td>9016681053</td>
+                <td>apmc281@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>ANKLAV</td>
+                <td>opp Nagarpalika Anklav</td>
+                <td>Anklav</td>
+                <td>Anklav</td>
+                <td>Anand</td>
+                <td>Gujarat</td>
+                <td>388510</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Rajeshbhai P chavda</td>
+                <td>02696-282844</td>
+                <td>9537796343</td>
+                <td>apmcanklav@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>KHAMBHAT</td>
+                <td>PRESS ROAD,NR.LAL DARVAJA,KHAMBHAT</td>
+                <td>KHAMBHAT</td>
+                <td>KHAMBHAT</td>
+                <td>ANAND</td>
+                <td>GUJARAT</td>
+                <td>388620</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>GRAIN,VEGETABLE</td>
+                <td>SANJAYSINH J.RAHOL</td>
+                <td>02698-220025</td>
+                <td>9825374953</td>
+                <td>apmckhambhat@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>BORSAD</td>
+                <td>Vasad Chokdi, Main Yard, at.Borsad, Ta.Borsad</td>
+                <td>BORSAD</td>
+                <td>BORSAD</td>
+                <td>ANAND</td>
+                <td>GUJARAT</td>
+                <td>388540</td>
+                <td>PMY (VASAD CHOKDI BORSAD), SMY (TARAPUR ROAD, ANAND CHOKDI, BORSAD)</td>
+                <td>Paddy,Wheat,Bajra</td>
+                <td>Rameshbhai Chavda</td>
+                <td>-</td>
+                <td>9998846371</td>
+                <td>apmcborsad05@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Petlad</td>
+                <td><br />
+                Shri Sardar Patel Grain Market Yard College Chowk Petlad</td>
+                <td>Petlad</td>
+                <td>Petlad</td>
+                <td>Anand</td>
+                <td>Gujarat</td>
+                <td>388450</td>
+                <td>Primary Market</td>
+                <td>GRAIN,VEGETABLE</td>
+                <td>Bhadreshbhai M. Patel</td>
+                <td>02697-251962</td>
+                <td>7046622242</td>
+                <td>apmcpetlad123@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF VALSAD DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>VALSAD</td>
+                <td>APMC VASAD FRONT OF SIGMENT LABORATORY , NEAR AURANGA RIVER, N.H.NO. 48 DHAMDACHI 396001 SURVEY NO 293</td>
+                <td>DHAMADACHI</td>
+                <td>VALSAD</td>
+                <td>VALSAD</td>
+                <td>GUJARAT</td>
+                <td>396001</td>
+                <td>PMY (Dhamdachi) SMY (Valsad) Non Regulated Market (NRM)</td>
+                <td>FRUITS</td>
+                <td>Mr. Jayeshbhai Desai</td>
+                <td>02632-254178</td>
+                <td>9825558242</td>
+                <td>apmcvalsad@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>PARDI</td>
+                <td>APMC PARDI NETIONAL HIGHWAY NO 48 KILLA PARDI TA PARDI DIST VALSAD 396125 Survey no 1299, 1305 A,1200 1 3 ,1300 2/2</td>
+                <td>PARDI</td>
+                <td>PARDI</td>
+                <td>VALSAD</td>
+                <td>GUJARAT</td>
+                <td>396125</td>
+                <td>PMY (Pardi) SMY (Udavada, vapi, Vaghchhipa, Rohina) Non Regulated Market (NRM)</td>
+                <td>FRUITS</td>
+                <td>Mr. Jayvardanbhai Patel</td>
+                <td>-</td>
+                <td>9979693860</td>
+                <td>apmcpardi@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>DHARAMPUR</td>
+                <td>APMC DHARAMPUR HATHIKHANA TA DHARAMPUR DIST VALSAD 396050 Survey No 1900,1901</td>
+                <td>DHARAMPUR</td>
+                <td>DHARAMPUR</td>
+                <td>VALSAD</td>
+                <td>GUJARAT</td>
+                <td>396050</td>
+                <td>PMY (Dharampur) SMY (Rajpuri Jangal, Bopi) Non Regulated Market (NRM)</td>
+                <td>FRUITS</td>
+                <td>Mr. Nisharbhai Shekh</td>
+                <td>-</td>
+                <td>9712470161</td>
+                <td>nisarsaikh161@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>KAPRADA</td>
+                <td>APMC KAPARADA AT POST NANAPONDHA ( HAT BAZAR) TA KAPRADA DIST VALSAD SURVE BLOCK NO 623 KHATA NO OLD 184 NEW 284</td>
+                <td>NANAPONDHA</td>
+                <td>KAPRADA</td>
+                <td>VALSAD</td>
+                <td>GUJARAT</td>
+                <td>396126</td>
+                <td>SMY (Nanapondha, Sutharpada) Non Regulated Market (NRM)</td>
+                <td>VEGETABLE</td>
+                <td>Mr. Rajeshbhai Galvi</td>
+                <td>-</td>
+                <td>9979374517</td>
+                <td>apmckaprada@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>UMARGAM</td>
+                <td>APMC UMARGAM AT POST BHILAD FRONT OF POST OFFICE LJ-11 UMARG AM TALUA UMARGAM DIST VALSAD PIN 396171 ( APMC HAVE NO LAND ONLY OFFICE)</td>
+                <td>UMARGAM</td>
+                <td>UMARGAM</td>
+                <td>VALSAD</td>
+                <td>GUJARAT</td>
+                <td>396170</td>
+                <td>No Market Yard in Umargam APMC.</td>
+                <td>-</td>
+                <td>Mr. Mohanbhai Patel</td>
+                <td>-</td>
+                <td>9099436840</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF NAVSARI DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>NAVSARI</td>
+                <td>APMC-NAVSARI</td>
+                <td>VIRAVAL</td>
+                <td>NAVSARI</td>
+                <td>NAVSARI</td>
+                <td>GUJARAT</td>
+                <td>396445</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>PADDY,VEGETABALS, FRUITS</td>
+                <td>SHRI DARSHAN M.DESAI</td>
+                <td>-</td>
+                <td>9913955305</td>
+                <td>apmc_navsari@yahoo.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>BILIMORA</td>
+                <td>APMC-BILIMORA</td>
+                <td>DEVSAR</td>
+                <td>GANDEVI</td>
+                <td>NAVSARI</td>
+                <td>GUJARAT</td>
+                <td>396380</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>PADDY,GRAIN,VEGETABALS, FRUITS</td>
+                <td>SHRI NIKUNJKUMAR D.NAIK</td>
+                <td>-</td>
+                <td>9328021129</td>
+                <td>apmcbilimora@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>CHIKHLI</td>
+                <td>APMC-CHIKHLI</td>
+                <td>CHIKHLI</td>
+                <td>CHIKHLI</td>
+                <td>NAVSARI</td>
+                <td>GUJARAT</td>
+                <td>396521</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>PADDY,GRAIN,VEGETABALS, FRUITS</td>
+                <td>SHRI MAKSUD M.LAKDAWALA</td>
+                <td>-</td>
+                <td>9714346699</td>
+                <td>apmcbilimora@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>VANSDA</td>
+                <td>APMC-VANSDA</td>
+                <td>SADARFAL</td>
+                <td>VANSDA</td>
+                <td>NAVSARI</td>
+                <td>GUJARAT</td>
+                <td>396580</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>PADDY,GRAIN,VEGETABALS, FRUITS</td>
+                <td>SHRI HINESH B.BHAVSAR</td>
+                <td>-</td>
+                <td>9426881271</td>
+                <td>apmc2vansda@gmail.com</td>
+               
+              </tr>
+              <tr>
+                
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF BHAVNAGAR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Bhavnagar</td>
+                <td>APMC- Bhavnagar CHITRA, Bhavnagar, PIN-364004 , CHITRA SERVRY NO- 61P4</td>
+                <td>Bhavnagar</td>
+                <td>Bhavnagar</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364004</td>
+                <td>FMC</td>
+                <td>onion,Cotton, Groundnut, grain, Pulses, Spices</td>
+                <td>Arvindbhai Santibnhai Chauhan</td>
+                <td>0278-244556</td>
+                <td>8780063678</td>
+                <td>Apmcbhavnagar@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Mahuva</td>
+                <td>APMC - Mahuva<br />
+                NearBus station road<br />
+                Mahuva - 364290 Survey No.216/2, 218P1/1, 221/1, 222/2</td>
+                <td>Mahuva</td>
+                <td>Mahuva</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364290</td>
+                <td>FMC</td>
+                <td>onion,Cotton, Groundnut, grain,Coconut, Pulses, Spices</td>
+                <td>Vishalbhai Pravinbhai Panchani</td>
+                <td>02844-222596</td>
+                <td>9974110910</td>
+                <td>Apmcmahuva@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>talaja</td>
+                <td>Near palitana chowkdi,palitana-talaja road,talaja-364140 104/2/P1</td>
+                <td>talaja</td>
+                <td>talaja</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364140</td>
+                <td>PMY</td>
+                <td>onion,Cotton, Groundnut, grain, Pulses, Spices</td>
+                <td>Ajitbhai Sursangbhai Parmar</td>
+                <td>02842-240978</td>
+                <td>9979872315</td>
+                <td>Apmctalaja@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Gariyadar</td>
+                <td>APMC GARIYADHAR, NAVAGAM ROAD TA .GARIYIADHAR DIST. BHAVNAGAR,364505</td>
+                <td>Gariyadar</td>
+                <td>Gariyadar</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364505</td>
+                <td>NRM</td>
+                <td>-</td>
+                <td>Angola Ramnikbhai Nagarbhai</td>
+                <td>02843-250762</td>
+                <td>9426464909</td>
+                <td>Apmcgariyadhar909@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Palitana</td>
+                <td>Market Yard Palitana, Talaja Road, Palitana Dist. Bhavngar- 364270 Survey no.474/1a, 474/2, 474/3p1, 475/1</td>
+                <td>Palitana</td>
+                <td>Palitana</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364270</td>
+                <td>PMY</td>
+                <td>Cotton, Grains</td>
+                <td>Prakashkumar Pravinbhai Pandya</td>
+                <td>02848-25220</td>
+                <td>9909954154</td>
+                <td>Apmcpalitana@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Umrala</td>
+                <td>A.P.M.C-Umrala. AT.Dhola TA.Umrala D.Bhavngar P.364320 survey number 60</td>
+                <td>Dhola</td>
+                <td>Umrala</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364320</td>
+                <td>FCM</td>
+                <td>-</td>
+                <td>Dav Kalubhai Jesinbhai</td>
+                <td> </td>
+                <td>9904059212</td>
+                <td>Apmcumrala@gmail.cim</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>shihor</td>
+                <td>At:. TA. Shihor , Dist: Bhavnagar pin.364240 Survey: 328</td>
+                <td>shihor</td>
+                <td>shihor</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364240</td>
+                <td>NRM</td>
+                <td>-</td>
+                <td>Pratapsingh Ratansigh Parmar</td>
+                <td>02846-252220</td>
+                <td>9712302622</td>
+                <td>Apmcshihor@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Valbhipur</td>
+                <td>At: TA. Vallabhipur DIst. Bhavnagar 364310</td>
+                <td>Valbhipur</td>
+                <td>Valbhipur</td>
+                <td>Bhavnagar</td>
+                <td>Gujaraqt</td>
+                <td>364310</td>
+                <td>NRM</td>
+                <td>-</td>
+                <td>Pruthvisinh Ajitsinh Gohil</td>
+                <td> </td>
+                <td>9998304988</td>
+                <td>Apmcvallbhipur@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF BHARUCH DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Bharuch</td>
+                <td>APMC BHARUCH,Near shraddha motors,N.H.highway No.48,Vadadala,Ta.Bharuch,Di.Bharuch</td>
+                <td>Bharuch</td>
+                <td>Bharuch</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>392155</td>
+                <td>Regulated secondary Market</td>
+                <td>vegetable</td>
+                <td>Vijaybhai T Patel</td>
+                <td>-</td>
+                <td>9377423282</td>
+                <td>apmcbharuch@yahoo.co.in</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Ankleshwar</td>
+                <td>APMC ANKLESHWAR,Opp.Lion Circle,Tran Rasta,station road,Ankleshwar</td>
+                <td>Ankleshwar</td>
+                <td>Ankleshwar</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>393001</td>
+                <td>RPM</td>
+                <td>vegetable</td>
+                <td>B.A.Patel</td>
+                <td>02646 247280</td>
+                <td>9426826370</td>
+                <td>apmc-ank821953@yahoo.in</td>
+               
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Amod</td>
+                <td>APMC AMOD, Jambusar-bharuch road,Amod,Ta.Amod,Di.Bharuch,</td>
+                <td>Amod</td>
+                <td>Amod</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>392110</td>
+                <td>RPM</td>
+                <td>No</td>
+                <td>A.D.Raj</td>
+                <td>-</td>
+                <td>9427115461</td>
+                <td>apmc.amod@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Jambusar</td>
+                <td>APMC JAMBUSAR, Tankari bhagor,college road, Jambusar ,Ta.Jambusar</td>
+                <td>Jambusar</td>
+                <td>Jambusar</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>392150</td>
+                <td>RPM</td>
+                <td>nil</td>
+                <td>Rashmikant Patel</td>
+                <td>2644220068</td>
+                <td>9979631311</td>
+                <td>apmcjambusar68@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Valiya</td>
+                <td>APMC VALIYA, Opp.civil court road,Valiya,Ta.Valiya,Di.Bharuch</td>
+                <td>Valiya</td>
+                <td>Valiya</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>393135</td>
+                <td>Primary Marketyard</td>
+                <td>cotton</td>
+                <td>Snehal D Sunava</td>
+                <td>2643270634</td>
+                <td>9925694747</td>
+                <td>apmcvalia@yahoo.in</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Zaghadiya</td>
+                <td>APMC ZAGHADIYA, Opp.Bus depot,Zaghadiya,Ta.Zaghadiya,Di.Bharuch</td>
+                <td>Zaghadiya</td>
+                <td>Zaghadiya</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>393110</td>
+                <td>RPM</td>
+                <td>No</td>
+                <td>B.T.brambhatt</td>
+                <td>-</td>
+                <td>9879398776</td>
+                <td>apmcjagadiya@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Hansot</td>
+                <td>APMC HANSOT, Hansot bus depot ni bajuma,Hansot</td>
+                <td>Hansot</td>
+                <td>Hansot</td>
+                <td>Bharuch</td>
+                <td>Gujarat</td>
+                <td>393030</td>
+                <td>RPM</td>
+                <td>No</td>
+                <td>i.c.Rahul V Patel</td>
+                <td>-</td>
+                <td>9998975007</td>
+                <td>rvp4042@gmail.com</td>
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF DANG DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>AHWA</td>
+                <td>APMC-AHWA AT- WAGHAI MAIN BAZAR ROAD</td>
+                <td>WAGHAI</td>
+                <td>WAGHAI</td>
+                <td>DANG</td>
+                <td>GUJARAT</td>
+                <td>394730</td>
+                <td>Primary market yard</td>
+                <td>PADDY.</td>
+                <td>D.D.GANGODE</td>
+                <td>-</td>
+                <td>-9428379294</td>
+                <td>apmcwaghai443@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF Junagadh DISTRICT</td>
+              </tr>
+              <tr>
+                <TD>1</TD>
+                <td>Junagadh</td>
+                <td>Sakkarbag Road, Junagadh</td>
+                <td>Junagadh</td>
+                <td>Junagadh</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362037</td>
+                <td>PMY</td>
+                <td>Wheat, Bajra, Chick Pea, Black Gram, Cotton, Pigenon Pea, Groundnut, Castor Seed, Sesame, Cummin, Coriander, Seed, Moong, Soyabean</td>
+                <td>Divyesh S. Gajera</td>
+                <td>--</td>
+                <td>7069700061</td>
+                <td>apmc_jnd@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Visavadar</td>
+                <td>Apmc Visavadar, At.Mandavad</td>
+                <td>Mandavad</td>
+                <td>Vishavadar</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362130</td>
+                <td>PMY</td>
+                <td>Wheat, Coriander, Seasume, Cumin, Gram, Moong bean, Black gram, Cotton, Ground nut, Soybean, etc...</td>
+                <td>G. N. Umretiya</td>
+                <td>--</td>
+                <td>9426826426</td>
+                <td>gj.visavadar@yahoo.com</td>
+              
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bhesan</td>
+                <td>Khambhaliya road, Bhesan</td>
+                <td>Bhesan</td>
+                <td>Bhesan</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362020</td>
+                <td>RPM</td>
+                <td>Wheat, Coriander, Seasume, Cumin, Gram, Moong bean, Black gram, Cotton, Ground nut, Soybean, etc...</td>
+                <td>S. P. Kubavat</td>
+                <td>02873 253401</td>
+                <td>9904034080</td>
+                <td>apmcbhesan@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Mendarda</td>
+                <td>Alidhra Road, Mendarda</td>
+                <td>Mendarda</td>
+                <td>Mendarda</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362260</td>
+                <td>PMY</td>
+                <td>Wheat, Tuver,Alad,Mag, Cotton, Ground nut, Soybean, etc...</td>
+                <td>B.R. Santoki</td>
+                <td>--</td>
+                <td>98252 71194</td>
+                <td>apmcmendarda1@gmai.com</td>
+               
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Manavadar</td>
+                <td>Sardargadh Road, Manavadar</td>
+                <td>Manavadar</td>
+                <td>Manavadar</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362630</td>
+                <td>PMY</td>
+                <td>Cotton, Groundnut</td>
+                <td>Akhilesh V. Bhatt</td>
+                <td>--</td>
+                <td>9377222155</td>
+                <td>apmcmanavadar@gmai.com</td>
+             
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Mangrol</td>
+                <td>Udhyognagar, Veraval Road, Mangrol</td>
+                <td>Mangrol</td>
+                <td>Mangrol</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362225</td>
+                <td>NRM</td>
+                <td>---</td>
+                <td>R. B. Chodasama</td>
+                <td>02878 222374</td>
+                <td>9824266347</td>
+                <td>apmcmangrol@gmai.com</td>
+               
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Maliya Hatina</td>
+                <td>Apmc Maliya Hatina</td>
+                <td>Maliya Hatina</td>
+                <td>Maliya Hatina</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362250</td>
+                <td>NRM</td>
+                <td>---</td>
+                <td>D. K. Kher</td>
+                <td>--</td>
+                <td>9426028405</td>
+                <td>kherbhagvan@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Keshod</td>
+                <td>Junagadh Highway, Keshod</td>
+                <td>Keshod</td>
+                <td>Keshod</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362220</td>
+                <td>NRM</td>
+                <td>---</td>
+                <td>Mayur D. Dhanesha</td>
+                <td>--</td>
+                <td>6351349210</td>
+                <td>apmc.ksd1987@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Vanthali</td>
+                <td>Dilawar Nagar, Junagadh Highway, Vanthali</td>
+                <td>Vanthali</td>
+                <td>Vanthali</td>
+                <td>Junagadh</td>
+                <td>Gujarat</td>
+                <td>362610</td>
+                <td>NRM</td>
+                <td>---</td>
+                <td>Vijay J. Pandya</td>
+                <td>--</td>
+                <td>9879319868<br />
+                8160866690</td>
+                <td>apmcvanthali@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF KHEDA DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Mehmadabad</td>
+                <td>Nadiadi Darwaja, Mahemdavad-387131</td>
+                <td>Mehmadabad</td>
+                <td>Mehmadabad</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>387131</td>
+                <td>PMY</td>
+                <td>paddy, wheet</td>
+                <td>Yashvantsinh jadav</td>
+                <td>-</td>
+                <td>9998796369</td>
+                <td>apmc.mehmadavas@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kheda</td>
+                <td>At. Radhu, Ta.Dist. Kheda - 387560<br />
+                Survey no. 483/a-1 , 485 pin no.387560</td>
+                <td>Kheda</td>
+                <td>Kheda</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>387560</td>
+                <td>PMY</td>
+                <td>vegitable paddy</td>
+                <td>SANJAY MANDOLA</td>
+                <td>-</td>
+                <td> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Matar</td>
+                <td>survey no 66 At.Limbasi, Ta. Matar, Dist. Kheda - 387520</td>
+                <td>Matar</td>
+                <td>Matar</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>387520</td>
+                <td>PMY</td>
+                <td>paddy, wheet</td>
+                <td>H. M. BHATT</td>
+                <td>-</td>
+                <td>9428643009</td>
+                <td>apmcmatar@yahoo.com</td>
+              
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Nadiyad</td>
+                <td>Sub Yard, Chaklashi, 387315, Survey No.-82/2&2107</td>
+                <td>Nadiyad</td>
+                <td>Nadiyad</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>388225</td>
+                <td>PMY</td>
+                <td>paddy, wheet, valiyari ambli</td>
+                <td>A. S. SODHA PARMAR</td>
+                <td>-</td>
+                <td>9904453461</td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Thasara</td>
+                <td>Dakor Sab Yard Survey no. 2086 pin no. 388225</td>
+                <td>Thasara</td>
+                <td>Thasara</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>365220</td>
+                <td>PMY</td>
+                <td>paddy, wheet</td>
+                <td>jatinbhai sukhadiya</td>
+                <td>-</td>
+                <td>9427854231</td>
+                <td>apmcthasara1947@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Mahudha</td>
+                <td>DAKOR ROAD MAHUDHA</td>
+                <td>Mahudha</td>
+                <td>Mahudha</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>387335</td>
+                <td>PMY</td>
+                <td>tamaku paddy</td>
+                <td>VIRENDRA BHAI</td>
+                <td>-</td>
+                <td>9712987065</td>
+                <td> </td>
+               
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Kathlal</td>
+                <td>KATHLAL KAPDVANJ ROAD KATHLAL</td>
+                <td>Kathlal</td>
+                <td>Kathlal</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>387630</td>
+                <td>PMY</td>
+                <td>paddy, wheet bajara , guvar</td>
+                <td>INDUBEN ZALA</td>
+                <td>-</td>
+                <td>9265939578</td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Kapdwanj</td>
+                <td>SAB YARD MOTIJAHER MU-PO.MOTIJAHER TA.KAPDWANJ Survey no. 353 pin no. 387620</td>
+                <td>Kapdwanj</td>
+                <td>Kapdwanj</td>
+                <td>KHEDA</td>
+                <td>Gujarat</td>
+                <td>387620</td>
+                <td>PMY</td>
+                <td>vegitable paddy nuts</td>
+                <td>DAXESH PATEL</td>
+                <td>-</td>
+                <td>9825013489</td>
+                <td> </td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF VADODARA DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Vadodara</td>
+                <td>Sayajipura Market Yard, Near Ajwa Crossing NH.08, Sayajipura, Vadodara</td>
+                <td>Sayajipura</td>
+                <td>Vadodara</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>390019</td>
+                <td>PMY (Vegitable)</td>
+                <td>Vegitable</td>
+                <td>K.K.Jani</td>
+                <td>--</td>
+                <td>9727761171</td>
+                <td>apmc-vadodara-guj@nic.in</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Karjan</td>
+                <td>Sardar vallabhbhai Patel Main Market Yard Karjan, Nava bajar, karjan</td>
+                <td>karjan</td>
+                <td>Karjan</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391240</td>
+                <td>PMY</td>
+                <td>Tur, Custor seed,</td>
+                <td>A.M.Maratha</td>
+                <td>--</td>
+                <td>9377822749</td>
+                <td>apmckarjan@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Padra</td>
+                <td>Sardar Patel Market, Tajpura road, Padra</td>
+                <td>Padra</td>
+                <td>Padra</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391440</td>
+                <td>PMY</td>
+                <td>Vegitable,Fruits</td>
+                <td>Alkeshbhai B.Patel</td>
+                <td>--</td>
+                <td>9724757805</td>
+                <td>apmcpadra@yahoomail.com</td>
+               
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Savli</td>
+                <td>APMC Savli, Station road</td>
+                <td>Savli</td>
+                <td>Savli</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391770</td>
+                <td>PMY</td>
+                <td>Cotton, Paddy, Tur, Wheat</td>
+                <td>Jignesh Patel</td>
+                <td>--</td>
+                <td>9825849446</td>
+                <td>apmcsavli778@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Dabhoi</td>
+                <td>Kisan Tower</td>
+                <td>Dabhoi</td>
+                <td>Dahoi</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391110</td>
+                <td>PMY</td>
+                <td>Cottom, Paddy, Castor seeds, Maize, Wheat</td>
+                <td>Ajit H.Rajput</td>
+                <td>02663-255108</td>
+                <td>9601039038</td>
+                <td>apmcdabhoi@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Waghodia</td>
+                <td>Main Bazar, Waghodia</td>
+                <td>Waghodia</td>
+                <td>Waghodia</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391760</td>
+                <td>PMY</td>
+                <td>Paddy, Wheat, Tur</td>
+                <td>Dharmendra Patel</td>
+                <td>02663-263462</td>
+                <td>9925709731</td>
+                <td>apmc-waghodia@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Shinor</td>
+                <td>APMC Shinor, At.Sadhli Ta.shinor Dist.Vadodara</td>
+                <td>Sadhli</td>
+                <td>Shinor</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391250</td>
+                <td>PMY</td>
+                <td>Custor, Cotton, Tuver, Wheat</td>
+                <td>Patel Yogeshbhai Thakorbhai</td>
+                <td>--</td>
+                <td>9879514267</td>
+                <td>--</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Desar</td>
+                <td>Sardar Patel Main Market Yard, Desar</td>
+                <td>Desar</td>
+                <td>Desar</td>
+                <td>Vadodara</td>
+                <td>Gujarat</td>
+                <td>391774</td>
+                <td>PMY</td>
+                <td>Cotton, Paddy, Tur, Wheat</td>
+                <td>Gopal P.solanki</td>
+                <td>2667-235224</td>
+                <td>9978817710</td>
+                <td>apmcdesar@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF AMRELI DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Amreli</td>
+                <td>SAVARKUNDLA ROAD - AMRELI</td>
+                <td>AMRELI</td>
+                <td>AMRELI</td>
+                <td>AMRELI</td>
+                <td>GUJARAT</td>
+                <td>365601</td>
+                <td>PMY/SMY</td>
+                <td>Wheat, Coriander, Seasume, Cumin, Cotton, Ground nut, Soybean, etc...</td>
+                <td>TUSHARBHAI HANSRABHAI HAPANI</td>
+                <td>02792-295555</td>
+                <td>9426372723</td>
+                <td>apmcamreli@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Savarkundala</td>
+                <td>MAHUVA ROAD, AT. SAVARKUNDLA, DIST.AMRELI</td>
+                <td>SAVARKUNDLA</td>
+                <td>SAVARKUNDLA</td>
+                <td>AMRELI</td>
+                <td>GUJARAT</td>
+                <td>364515</td>
+                <td>PMY</td>
+                <td>Cotton, Growndnut, Seasam, Gram, Weat, Pulses, Grain etc.</td>
+                <td>Mukeshbhai M. Chovatiya</td>
+                <td>-</td>
+                <td>7623087299</td>
+                <td>apmc_skundla@yahoo.co.in</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Babara</td>
+                <td>The Agricutural Produce Market Committee, babra<br />
+                Marketing yaard :- Bavabapus' Fulwadi rajkot - bhavanagar<br />
+                Highway ta. babra dis. amareli</td>
+                <td>BABRA</td>
+                <td>BABRA</td>
+                <td>AMRELI</td>
+                <td>GUJA RAT</td>
+                <td>365421</td>
+                <td>PMY</td>
+                <td>Cotton, Growndnut, Seasam, Gram, Weat, Pulses, Grain etc.</td>
+                <td>Ajaybhai D. Pandya</td>
+                <td>2791233564</td>
+                <td>9099888800</td>
+                <td>apmcbabra@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Bagasara</td>
+                <td>THE AGRICULTURAL PRODUCE MARKET COMMITTEE - BAGASARA<br />
+                STATION RAOD BAGASARA</td>
+                <td>BAGASARA</td>
+                <td>BAGASARA</td>
+                <td>AMRELI</td>
+                <td>GUJA RAT</td>
+                <td>365440</td>
+                <td>PMY</td>
+                <td>Cotton, Growndnut, Seasam, Gram, Weat, Pulses, Grain etc.</td>
+                <td>i.c.RAjeshkumar b. thummar</td>
+                <td>02796-222087</td>
+                <td>9979621998</td>
+                <td>apmcbagasara5412@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Dhari</td>
+                <td>THE AGRICULTURAL PRODUCE MARKET COMMITTEE - DHARI<br />
+                SHRI MANUBHAI KOTADIYA MARKET YARD,<br />
+                RAILWAY STATION RAOD</td>
+                <td>DHARI</td>
+                <td>DHARI</td>
+                <td>AMRELI</td>
+                <td>GUJARAT</td>
+                <td>365640</td>
+                <td>PMY</td>
+                <td>Grain,Pulses and spices</td>
+                <td>Narenkumar Maganlal Shingala</td>
+                <td>02797-221028</td>
+                <td>9099345155</td>
+                <td>apmcdhari@gamil.com</td>
+               
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Rajula</td>
+                <td>The Agricutural Produce Market Committee,Near - Bus Station,</td>
+                <td>Rajula</td>
+                <td>Rajula</td>
+                <td>AMRELI</td>
+                <td>Gujrat</td>
+                <td>365560</td>
+                <td>PMY</td>
+                <td>Cotton, Growndnut, Seasam, Gram, Weat, Pulses, Grain etc.</td>
+                <td>Rajeshbhai K. Kakdiya</td>
+                <td>02794-222047</td>
+                <td>9624655050</td>
+                <td>apmcrajula@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Lathi</td>
+                <td>The Agricutural Produce Market Committee,Near Mamlatadar Office, Lathi</td>
+                <td>Lathi</td>
+                <td>Lathi</td>
+                <td>Amreli</td>
+                <td>Gujarat</td>
+                <td>365430</td>
+                <td>PMY</td>
+                <td>----</td>
+                <td>Bharatbhai B. Baraiya</td>
+                <td>--</td>
+                <td>9913937893</td>
+                <td>apmclathi99@gimal.com</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Liliya</td>
+                <td>Opp.Railway Station, Sanaliya Road, Liliya Mota, Dist Amreli</td>
+                <td>Liliyamota</td>
+                <td>Liliya</td>
+                <td>Amreli</td>
+                <td>Gujarat</td>
+                <td>365535</td>
+                <td>PMY</td>
+                <td>Cotton, Growndnut, Seasam, Gram, Weat, Pulses, Grain Spices etc.</td>
+                <td>Rakeshkumar Dhirajlal Umarethiya</td>
+                <td>-</td>
+                <td>9979127664</td>
+                <td>apmcliliyamota@yahoo.com</td>
+               
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Damnagar</td>
+                <td>The Agricultural Produce Market Committee Damnagar, Station road</td>
+                <td>DAMNAGAR</td>
+                <td>LATHI</td>
+                <td>AMRELI</td>
+                <td>GUJARAT</td>
+                <td>365220</td>
+                <td>PMY</td>
+                <td> </td>
+                <td>Devendrakumar C. Acharya</td>
+                <td>-</td>
+                <td>9427746870</td>
+                <td>apmcdamnagar@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Timbi</td>
+                <td>The Agricultural Produce Market Committee Timbi</td>
+                <td>Timbi</td>
+                <td>Jafrabad</td>
+                <td>AMRELI</td>
+                <td>GUJARAT</td>
+                <td>362730</td>
+                <td>PMY</td>
+                <td>--</td>
+                <td>Manubhai B. Vaja</td>
+                <td>-</td>
+                <td>9429701184</td>
+                <td>apmctimbi@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Khambha</td>
+                <td>The Agricultural Produce Market Committee, Khambha</td>
+                <td>Khambha</td>
+                <td>Khambha</td>
+                <td>Amreli</td>
+                <td>Gujarat</td>
+                <td>365650</td>
+                <td>PMY</td>
+                <td>Cotton, Groundnut, Gram,<br />
+                Pulses</td>
+                <td>Vinodkumar Maganbhai Mandanka</td>
+                <td>02797-260115</td>
+                <td>9428798359</td>
+                <td>apmckhambha@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF RAJKOT DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>RAJKOT</td>
+                <td>The Agricultural Produce Market Committee - Rajkot, (Near Bedi, Rajkot-Morbi Highway)</td>
+                <td>Bedi</td>
+                <td>Rajkot</td>
+                <td>Rajkot</td>
+                <td>Gujarat</td>
+                <td>360028</td>
+                <td>PMY</td>
+                <td>Cotton, Ground Nut, Gram,Seasme Seeds, Castor Seed,Cumin Seed, Chilly, Soyabean,Corriander Seed, Garlic</td>
+                <td>B.R. Tejani</td>
+                <td>0281-2790001</td>
+                <td>98795 67440</td>
+                <td>apmcrajkot14@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GONDAL</td>
+                <td>National Highway, Gondal Bypass</td>
+                <td>Gondal</td>
+                <td>Gondal</td>
+                <td>Rajkot</td>
+                <td>Gujarat</td>
+                <td>360311</td>
+                <td>Regulated Primary Market (RPM)</td>
+                <td>Yes</td>
+                <td>Tarunbhai J. Panchani</td>
+                <td>(02825) 220871</td>
+                <td>9979046006</td>
+                <td>apmcgondal@yahoo.co.in</td>
+               
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>JETPUR</td>
+                <td>The Agricultural Produce Market Committee - Jetpur</td>
+                <td>Jetpur</td>
+                <td>Jetpur</td>
+                <td>Rajkot</td>
+                <td>Gujarat</td>
+                <td>360370</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>B.B. Sarvaiya</td>
+                <td>02823-220020</td>
+                <td>9925183904</td>
+                <td>apmcjetpur@gmail.com</td>
+                
+              </tr>
+              <tr><td>4</td>
+                <td>DHORAJI</td>
+                <td>NATIONAL HIGH WAY BY PASS</td>
+                <td>DHORAJI</td>
+                <td>DHORAJI</td>
+                <td>RAJKOT</td>
+                <td>GUJARAT</td>
+                <td>360410</td>
+                <td>PMY</td>
+                <td>COTON, GROUNDNUTS,WHEAT,SOYABEEN,SESAME,CORRIENDER SEED CASTORSEED,</td>
+                <td>BHUPATBHAI KOYANI</td>
+                <td>-</td>
+                <td>9879024956</td>
+                <td>apmcdrj@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>UPLETA</td>
+                <td>kolki road,upleta</td>
+                <td>upleta</td>
+                <td>upleta</td>
+                <td>RAJKOT</td>
+                <td>GUJARAT</td>
+                <td>360490</td>
+                <td>PMY</td>
+                <td>COTON, GROUNDNUTS,WHEAT,SOYABEEN,SESAME,CORRIENDER SEED CASTORSEED,</td>
+                <td>Raj.R.ghodasara</td>
+                <td>-</td>
+                <td>9904678108</td>
+                <td>apmcupleta1@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>JAMKANDORNA</td>
+                <td>JAY SARDAR MARKET ROAD KALAVAD ROAD JAMKANDORNA</td>
+                <td>JAMKANDORNA</td>
+                <td>JAMKANDORNA</td>
+                <td>RAJKOT</td>
+                <td>GUJARAT</td>
+                <td>360405</td>
+                <td>NON REGULATED MARKET (NRM)</td>
+                <td>NO COMODITY TRADE</td>
+                <td>P.B.AMIPARA</td>
+                <td>02824 271685/02824 271685</td>
+                <td>94272 14918</td>
+                <td>apmcjkn@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>VINCHHIYA</td>
+                <td>AHEMDABAD HIGHWAY , VINCHHIYA</td>
+                <td>VINCHHIYA</td>
+                <td>VINCHHIYA</td>
+                <td>RAJKOT</td>
+                <td>GUJRAT</td>
+                <td>360055</td>
+                <td>PMY</td>
+                <td>COTON</td>
+                <td>R.G. KANETIYA</td>
+                <td>-</td>
+                <td>9924086405</td>
+                <td>apmc.vinchhiya@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>JASDAN</td>
+                <td>DARBAR SAHEB SHREE SHIVRAJKUMAR KHACHAR MARKET YARD,NEW MARKET YARD, BY PASS ROAD JASDAN</td>
+                <td>JASDAN</td>
+                <td>JASDAN</td>
+                <td>RAJKOT</td>
+                <td>GUJRAT</td>
+                <td>360050</td>
+                <td>PRIMARY MARKET YARD(PMY)</td>
+                <td>COTTON,PULSES,OILSEEDS,CEREALS,SUGARCAN, SPICES AND OTHER PRODUCT</td>
+                <td>BALVANTBHAI N. CHOHALIYA</td>
+                <td>(02821)220168,221168</td>
+                <td>9925171168</td>
+                <td>APMC.JASDAN@GMAIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>KOTDA SANGANI</td>
+                <td>First Flor, Shiv complex, Near Shiv Hotel</td>
+                <td>Veraval(Shapar)</td>
+                <td>Kotadasangani</td>
+                <td>Rajkot</td>
+                <td>Gujrat</td>
+                <td>360024</td>
+                <td>NRM</td>
+                <td>-</td>
+                <td>Nirmalbhai R. Meta</td>
+                <td>-</td>
+                <td>9824836551</td>
+                <td>rohitvora7@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF BANASKANTHA DISTRICT</td>
+              </tr>
+              <tr>
+                <TD>1</TD>
+                <td>Palanpur</td>
+                <td>The Agricultural produce market committee, Dairy Jagana Road Palanpur</td>
+                <td>Palanpur</td>
+                <td>Palanpur</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385001</td>
+                <td>Regular Market Yard</td>
+                <td>yes</td>
+                <td>Laxmanbhai J.Mor</td>
+                <td>02742-255071</td>
+                <td>9428844788</td>
+                <td>apmc_pln@yahoo.co.in</td>
+              
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Deesa</td>
+                <td>saradar bhavan main market yard, deesa</td>
+                <td>Deesa</td>
+                <td>Deesa</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385535</td>
+                <td>Regulated primary market yard</td>
+                <td>yes</td>
+                <td>A.N.Joshi</td>
+                <td>02744-220072</td>
+                <td>9428679314</td>
+                <td>apmc_deesa@yahoo.co.in</td>
+             
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bhabhar</td>
+                <td>The Agriculture Produce Market Committee Bhabhar</td>
+                <td>Bhabhar</td>
+                <td>Bhabhar</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385320</td>
+                <td>Regulated Market</td>
+                <td>yes</td>
+                <td>Sanjaybhai R. Chaudhari</td>
+                <td>02735-222048</td>
+                <td>9825730500</td>
+                <td>apmc_bhabhar@yahoo.co.in</td>
+               
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Dantiwada</td>
+                <td>Panthawada</td>
+                <td>Panthawada</td>
+                <td>Panthawada</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385545</td>
+                <td>Regulated primary market yard</td>
+                <td>yes</td>
+                <td>H.M.Patel</td>
+                <td>02748-226512</td>
+                <td>9909305563</td>
+                <td>Apmcpanthawada2000@gamil.com</td>
+              
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Amiragadh</td>
+                <td>National Highway, at-Zanzarava Post-Iqbalgadh</td>
+                <td>at-Zanzarava Post-Iqbalgadh</td>
+                <td>Amiragadh</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385135</td>
+                <td>Regulated primary market yard (RPM)</td>
+                <td>yes</td>
+                <td>B.D.Patel</td>
+                <td>-</td>
+                <td>9904143343</td>
+                <td>apmcamirgadh@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <TD>6</TD>
+                <td>Kankarej</td>
+                <td>The Agriculture Produce Market Committee Thara</td>
+                <td>Thara</td>
+                <td>Kankarej</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385555</td>
+                <td>Regulated Market</td>
+                <td>yes</td>
+                <td>Chaudhari Hasamukhabhai Rajabhai</td>
+                <td>02747-222019</td>
+                <td>9427431466 7698361919</td>
+                <td>apmc1716@yahoo.co.in</td>
+                
+              </tr>
+              <tr>
+                <TD>7</TD>
+                <td>Dhanera</td>
+                <td>apmc dhanera main market, yard near post office, dhanera</td>
+                <td>dhanera</td>
+                <td>dhanera</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385310</td>
+                <td>Regulated primary market yard</td>
+                <td>yes</td>
+                <td>M.U. Shravag</td>
+                <td>02748-222038</td>
+                <td>9725970909</td>
+                <td>apmcdhanera@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <TD>8</TD>
+                <td>Tharad</td>
+                <td>Sanchor Highway,Tharad</td>
+                <td>Tharad</td>
+                <td>Tharad</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385566</td>
+                <td>Regulated primary market yard(RPM)</td>
+                <td>yed</td>
+                <td>B.M.Patel</td>
+                <td>02737-222147</td>
+                <td>9825057032</td>
+                <td>apmcthd@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <TD>9</TD>
+                <td>Vadgam</td>
+                <td>kheralu Magaravada chokadi</td>
+                <td>Vadgam</td>
+                <td>Vadgam</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385410</td>
+                <td>Regulated primary market yard (RPM)</td>
+                <td>yes</td>
+                <td>M.G.Dhuliya</td>
+                <td>02739-261131</td>
+                <td>9426342480</td>
+                <td>vadgamapmc@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Danta</td>
+                <td> </td>
+                <td>Danta</td>
+                <td>Danta</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385120</td>
+                <td>Regulated primary market yard (RPM)</td>
+                <td>yes</td>
+                <td>P.B.Gadhavi</td>
+                <td>-</td>
+                <td>9429721100</td>
+                <td>-</td>
+               
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Vav</td>
+                <td>Wav-Bhabhar Road</td>
+                <td>Wav</td>
+                <td>Wav</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385575</td>
+                <td>Regulated primary market yard (RPM)</td>
+                <td>yes</td>
+                <td>L.M.Chaudhary</td>
+                <td>-</td>
+                <td>9537464968</td>
+                <td>apmcvav@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Deodar</td>
+                <td>Deodar APMC Main Market Yard, KOTDA(D)</td>
+                <td>DEODAR</td>
+                <td>Deodar</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385330</td>
+                <td>Regulated primary market yard</td>
+                <td>yes</td>
+                <td>P.R.Patel</td>
+                <td>-</td>
+                <td>9727101808</td>
+                <td>apmcdeodar@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Lakhani</td>
+                <td>Mahatma Gandhi bhavan Deesa Tharad Highway Lakhani</td>
+                <td>lakhani</td>
+                <td>lakhani</td>
+                <td>Banaskantha</td>
+                <td>Gujarat</td>
+                <td>385535</td>
+                <td>Regulated primary market yard</td>
+                <td>yes</td>
+                <td>D.V.Vaghela</td>
+                <td>02744-256595</td>
+                <td>9998587583</td>
+                <td>Apmclakhani95@gmail.com</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Suigam</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF BOTAD DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>BOTAD</td>
+                <td>MARKET YARD, PALIYAD ROAD, BOTAD</td>
+                <td>BOTAD</td>
+                <td>BOTAD</td>
+                <td>BOTAD</td>
+                <td>GUJARAT</td>
+                <td>364710</td>
+                <td>PMY</td>
+                <td>COTTON, WHEAT, GROUNDNUT, BAJARA ETC.</td>
+                <td>ANAKBHAI A. MOBH</td>
+                <td>02849-255002</td>
+                <td>9904014777</td>
+                <td>apmcbotad@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GADHDA</td>
+                <td>DHASA ROAD, SAMA KANTHE GADHDA (SWA)</td>
+                <td>GADHDA</td>
+                <td>GADHDA</td>
+                <td>BOTAD</td>
+                <td>GUJARAT</td>
+                <td>364750</td>
+                <td>PMY</td>
+                <td>COTTON, GROUNDNUT, BAJARA WHEAT ETC.</td>
+                <td>B.D.CHAVDA</td>
+                <td>02847-252130</td>
+                <td>9427753290</td>
+                <td>apmcgadhada@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>BARWALA</td>
+                <td>NEAR ROKADIYA HANUMAN TEMPAL, BARWALA</td>
+                <td>BARWALA</td>
+                <td>BARAWALA</td>
+                <td>BOTAD</td>
+                <td>GUJARAT</td>
+                <td>382450</td>
+                <td>PMY</td>
+                <td>--</td>
+                <td>N.V.KHACHAR</td>
+                <td>--</td>
+                <td>9898128214</td>
+                <td>--</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>RANPUR</td>
+                <td>DHARPIPALA ROAD, RANAPUR</td>
+                <td>RANPUR</td>
+                <td>RANPUR</td>
+                <td>BOTAD</td>
+                <td>GUJARAT</td>
+                <td>382245</td>
+                <td>PMY</td>
+                <td>COTTON</td>
+                <td>C.S.PARMAR</td>
+                <td>--</td>
+                <td>8866445448</td>
+                <td>apmcranpur786@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF PORBANDAR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>PORBANDAR</td>
+                <td>OPP ROKDIYA HANUMAN TEMPLE, PORBANDAR</td>
+                <td>KHAPAT</td>
+                <td>PORBANDAR</td>
+                <td>PORBANDAR</td>
+                <td>GUJARAT</td>
+                <td>360579</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>SHRI M.M.ODEDARA</td>
+                <td>0286 2220072</td>
+                <td>9427258399</td>
+                <td>apmcpbr@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <TD>2</TD>
+                <td> KUTIYANA</td>
+                <td>DEVDA NAKA, PORBANDAR ROAD, ABOVE DWARKADHISH MEDICAL, KUTIYANA, DIS. PORBANDAR</td>
+                <td>KUTIYANA</td>
+                <td>KUTIYANA</td>
+                <td>PORBANDAR</td>
+                <td>GUJARAT</td>
+                <td>362650</td>
+                <td>PMY</td>
+                <td>NO</td>
+                <td>SHRI D.D.KARANGIYA</td>
+                <td>02804 260418</td>
+                <td>9925589146</td>
+                <td>apmckutiyana@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF SURAT DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td> KOSAMBA</td>
+                <td>Mota Mandir Road, TARSADI</td>
+                <td>Kosamba</td>
+                <td>Mangrol</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>395010</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>Yes</td>
+                <td>Ajitsinh C Atodaria</td>
+                <td>0</td>
+                <td>94268 90585</td>
+                <td>apmckosamba@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td> SURAT</td>
+                <td>Puna Kumbharia Road</td>
+                <td>Dumbhal</td>
+                <td>Choryasi</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>395010</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>Yes</td>
+                <td>Neelesh Thorat</td>
+                <td>0261-2336453</td>
+                <td>9824119366</td>
+                <td>apmcsurat1@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td> MANDVI</td>
+                <td>Ambaji Road, Mandvi</td>
+                <td>21.26013</td>
+                <td>Mandvi</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>394160</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>Yes</td>
+                <td>Dipesh Mafatlal Shah</td>
+                <td>02623 221029</td>
+                <td>98259 21404</td>
+                <td>apmcmandvi@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td> BARDOLI</td>
+                <td>AT-SURALI, PO-MADHI,</td>
+                <td>SURALI (MADHI)</td>
+                <td>BARDOLI</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>394340</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>Yes</td>
+                <td>JAYESH NANDLAL GUJARATHI</td>
+                <td> </td>
+                <td>98256 45167</td>
+                <td>bardoliapmc@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td> MAHUVA</td>
+                <td>APMC MAHUVA ta.mahuva dist.surat</td>
+                <td>Mahuva</td>
+                <td>Mahuva</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>394650</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>Yes</td>
+                <td>I.sc.<br />
+                Amit kumar s. Vyas</td>
+                <td>2625255741</td>
+                <td>9687098424</td>
+                <td>apmcmahuwa@hotmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td> UMARPADA</td>
+                <td>Market Yard</td>
+                <td>Kevdi</td>
+                <td>Umarpada</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>394445</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>Yes</td>
+                <td>Ajitsinh C Atodaria</td>
+                <td>0</td>
+                <td>94268 90585</td>
+                <td>apmcumarpada1@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td> KAMREJ</td>
+                <td>N.H. NO. 48, AT VALTHAN, TA. KAMREJ, DIST. SURAT</td>
+                <td>Valthan</td>
+                <td>Kamrej</td>
+                <td>Surat</td>
+                <td>Gujarat</td>
+                <td>394310</td>
+                <td>Primary Market Yard (PMY)</td>
+                <td>No</td>
+                <td>N.A.</td>
+                <td>---</td>
+                <td>---</td>
+                <td>---</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF TAPI DISTRICT</td>
+              </tr>
+              <tr>
+               <td>1</td>
+                <td> VYARA</td>
+                <td>AT&PO VYARA,TA.VYARA,DIST.TAPI.PIN-394650</td>
+                <td>VYARA</td>
+                <td>VYARA</td>
+                <td>TAPI</td>
+                <td>GUJARAT</td>
+                <td>394650</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>ARHAR, BENGAL GRAM, PADDY, BLACK GRAM, GROUNDNUT, JOWAR, WHEAT, GREEN GRAM</td>
+                <td>SHRI ROBINBHAI RAMESHBHAI GAMIT</td>
+                <td>02626-220073</td>
+                <td>9638777679</td>
+                <td>vyaraapmc1955@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>VALOD</td>
+                <td>AT&POST.BUHARI,TA.VALOD,DIST.TAPI.PIN-394640</td>
+                <td>BUHARI</td>
+                <td>VALOD</td>
+                <td>TAPI</td>
+                <td>GUJARAT</td>
+                <td>394640</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>PADDY, GROUNDNUT, RED GRAM, BLACK GRAM, GREEN GRAM, ARHAR</td>
+                <td>SHRI SAPNILKUMAR SUNILBHAI SHAH</td>
+                <td>02625-244247</td>
+                <td>9978476776</td>
+                <td>apmcvalod1976@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>SONGADH</td>
+                <td>AT.SONGADH ,DEVAJIPURA, DIST.TAPI(394670)</td>
+                <td>SONGADG</td>
+                <td>SONGADH</td>
+                <td>TAPI</td>
+                <td>GUJARAT</td>
+                <td>394670</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>PADDY, SORGHUM, PEANUTS, URAD, LENTILS, MUG, SOYABINS, TUVER, CHICKPEAS, DESI PEAS, VAL, TAMARIND</td>
+                <td>SHRI RAHULKUMAR JAYANTILAL GAMIT</td>
+                <td>-</td>
+                <td>9726531588</td>
+                <td>apmcsongadh1@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>UCHCHHAL</td>
+                <td>AT&PO.UCHHAL,TA.VALOD,DIST.TAPI.PIN-394375</td>
+                <td>UCHCHHAL</td>
+                <td>UCHCHHAL</td>
+                <td>TAPI</td>
+                <td>GUJARAT</td>
+                <td>394375</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>PADDY, WHEAT, JUWAR, SOYABIN, GREEN BEANS, COTTON, MAIZE, GRAM</td>
+                <td>SHRI MUKESHBHAI JAYANTBHAI VASAVA</td>
+                <td>02628-231117</td>
+                <td>9687798167</td>
+                <td>apmcuchhal@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td> NIZAR</td>
+                <td>AT&PO.NIZAR, TA.NIZAR,DIST.TAPI, PIN-394370</td>
+                <td>NIZAR</td>
+                <td>NIZAR</td>
+                <td>TAPI</td>
+                <td>GUJARAT</td>
+                <td>394370</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>JOWAR, WHEAT, CHICKPEAS, MEALETS, COTTON, SOYABIN, CORN</td>
+                <td>SHRI VIKESHBHAI DILIPBHAI PADVI</td>
+                <td>-</td>
+                <td>7698517354</td>
+                <td>apmcnizar@yahoo.com.in</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>KUKARMUNDA</td>
+                <td>AT&POST.KUKARMUNDA, DIST.TAPI.PIN-394380</td>
+                <td>KUKARMUNDA</td>
+                <td>KUKARMUNDA</td>
+                <td>TAPI</td>
+                <td>GUJARAT</td>
+                <td>394380</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>JOWAR, WHEAT, CHICKPEAS, MEALETS, COTTON, SOYABIN, CORN, CESPOR,</td>
+                <td>SHRI VIKESHBHAI DILIPBHAI PADVI</td>
+                <td>-</td>
+                <td>7698517354</td>
+                <td>apmckukarmunda@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF PANCHMAHAL DISTRICT</td>
+              </tr>
+              <tr>
+               <td>1</td>
+                <td>GODHRA</td>
+                <td>AT.PO. NEAR BUS STATION GODHRA</td>
+                <td>GODHRA</td>
+                <td>GODHRA</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389001</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>PRAKASHCHANDRA ABHESINH PATEL</td>
+                <td>9016941500</td>
+                <td>9979675555 8849003274</td>
+                <td>apmcgodhra@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>SHAHERA</td>
+                <td>AT.PO. SHAHERA</td>
+                <td>SHAHERA</td>
+                <td>SHAHERA</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389210</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>ARAVINDSINH RATANSINH PARMAR</td>
+                <td>-</td>
+                <td>9898641588</td>
+                <td>apmcshehera@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>MORVA (H)</td>
+                <td>AT.PO. MORVA (H)</td>
+                <td>MORVA (H)</td>
+                <td>MORVA(H)</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389115</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>BARIA ASHVINKUMAR BHARATSINH</td>
+                <td>-</td>
+                <td>8141179988</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>DEROL</td>
+                <td>AT.PO. DEROL</td>
+                <td>DEROL</td>
+                <td>KALOL</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389320</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>VIJAY CHAUHAN</td>
+                <td> </td>
+                <td>9898325916</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td> GHOGHAMBA</td>
+                <td>AT.PO. GHOGHAMBA</td>
+                <td>GOGHAMBA</td>
+                <td>GOGHAMBA</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389365</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>MAHENDRABHAI PATEL</td>
+                <td>-</td>
+                <td>9979067014</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>HALOL</td>
+                <td>AT.PO. HALOL</td>
+                <td>HALOL</td>
+                <td>HALOL</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389350</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>AMIT PATEL</td>
+                <td> </td>
+                <td>9428674844</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td> JAMBUGHODA</td>
+                <td>AT. PO. JAMBUGHODA</td>
+                <td>JAMBUGHODA</td>
+                <td>JAMBUGHODA</td>
+                <td>PANCHMAHAL</td>
+                <td>GUJARAT</td>
+                <td>389390</td>
+                <td>RPM</td>
+                <td>PADDY, MAIZE,CASTOR SEED, RICE, BLACK GRAM, RED GRAM COTTON, BAJRA, WHEAT, GROUNDNUT AND OTHER REGULATED COMMIDITY, VEGITABLES</td>
+                <td>AMIT PATEL</td>
+                <td> </td>
+                <td>9428674844</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF AHMEDABAD DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>dholka</td>
+                <td>cotton market yard, kheda- bagodara highway road, mithikuie, dholka</td>
+                <td>dholka</td>
+                <td>dholka</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382225</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>Ghanshyamsinh dabhi</td>
+                <td>no</td>
+                <td>8849205157</td>
+                <td>Apmcdholka66@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>bavla</td>
+                <td>national high way 8 A, Bavla</td>
+                <td>bavla</td>
+                <td>bavla</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382220</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>Himmatsinh chavda</td>
+                <td>232735</td>
+                <td>9925030917</td>
+                <td>-</td>
+               
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>dhandhuka</td>
+                <td>cotton yard, college road, dhandhuka</td>
+                <td>dhandhuka</td>
+                <td>dhandhuka</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382460</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>B.R.PATEL</td>
+                <td>-</td>
+                <td>7600780705</td>
+                <td>dhandhuka.apmc@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>sanand</td>
+                <td>Railway station road, sanand</td>
+                <td>sanand</td>
+                <td>sanand</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382110</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>G.A.PATEL</td>
+                <td>9979502202</td>
+                <td>9879592512</td>
+                <td>apmcsanand1@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>viramgam</td>
+                <td>near rokadiya hanuman temple, viramgam</td>
+                <td>viramgam</td>
+                <td>viramgam</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382150</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>B.P.PATEL</td>
+                <td>233260</td>
+                <td>9427418495</td>
+                <td>apmcvgm@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>mandal</td>
+                <td>opp petrol pump, 3 rasta, mandal</td>
+                <td>mandal</td>
+                <td>mandal</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382130</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>Rohit. D. Patel</td>
+                <td>-</td>
+                <td>9724354833</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>rampura detroj</td>
+                <td>Katosan road, rampura-detroj</td>
+                <td>Katosan road</td>
+                <td>detroj</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382145</td>
+                <td>PMY</td>
+                <td>yes</td>
+                <td>B.B.Patel</td>
+                <td>-</td>
+                <td>9727032022</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>dholera</td>
+                <td>Bhavani hotel, 1st floor. dholera,</td>
+                <td>dholera</td>
+                <td>dholera</td>
+                <td>ahmedabad(Rural)</td>
+                <td>gujrat</td>
+                <td>382455</td>
+                <td>-</td>
+                <td>no</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12  p13 p8 ">APMCS OF NARMADA DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>RAJPIPLA</td>
+                <td>Near Railway Station</td>
+                <td>Rajpipla</td>
+                <td>Nandod</td>
+                <td>Narmada</td>
+                <td>Gujarat</td>
+                <td>393145</td>
+                <td>Primary Market Yard</td>
+                <td>No</td>
+                <td>Hemraj k. Shere</td>
+                <td>-</td>
+                <td>9099074552</td>
+                <td>apmcrajpipla@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>GARUDESHWAR</td>
+                <td>Skte shear crossing</td>
+                <td>Akteshwar</td>
+                <td>Garudeshwar</td>
+                <td>Narmada</td>
+                <td>Gujarat</td>
+                <td>393151</td>
+                <td>Primary Market Yard</td>
+                <td>No</td>
+                <td>JAYESHBHAI G. TADVI</td>
+                <td>-</td>
+                <td>9081428643</td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>TILAKWADA</td>
+                <td>Bside SBI, Tilakwada</td>
+                <td>Tilakwada</td>
+                <td>Tilakwada</td>
+                <td>Narmada</td>
+                <td>Gujarat</td>
+                <td>393040</td>
+                <td>Primary Market Yard</td>
+                <td>No</td>
+                <td>KAMALBHAI PUROHIT</td>
+                <td>-</td>
+                <td>6354586917</td>
+                <td>apmctilakwada@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Dediapada</td>
+                <td>Pansar Road Dediapada</td>
+                <td>Dediapada</td>
+                <td>Dediapada</td>
+                <td>Narmada</td>
+                <td>Gujarat</td>
+                <td>393040</td>
+                <td>Primary Market Yard</td>
+                <td>No</td>
+                <td>Shakuntala O Vasava</td>
+                <td>-</td>
+                <td>9712424133</td>
+                <td>apmcdediapada@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>SELAMBA</td>
+                <td>at.selamba ta.sagbara</td>
+                <td>SELAMBA</td>
+                <td>Sagbara</td>
+                <td>Narmada</td>
+                <td>Gujarat</td>
+                <td>393025</td>
+                <td>Primary Market Yard</td>
+                <td>No</td>
+                <td>Umedshin vasava</td>
+                <td>-</td>
+                <td>95101 47632</td>
+                <td>apmcselamba1968@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p8 p13 ">APMCS OF SURENDRANAGAR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Patdi</td>
+                <td>APMC PATDI KHARAGODHA ROAD KANYA SHALA SAME PATADI</td>
+                <td>Patdi</td>
+                <td>Patdi</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>382765</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>S.B. DESAI</td>
+                <td>-</td>
+                <td>98242 93785</td>
+                <td>apmcpatdi@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Wadhwan</td>
+                <td>APMC WADHVAN GIDC AERIYA WADHVAN</td>
+                <td>Wadhwan</td>
+                <td>Wadhwan</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>363030</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>D.B.CHUDASAMA</td>
+                <td>-</td>
+                <td>9825325574</td>
+                <td>apmcwadhwan@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>chotila</td>
+                <td>APMC CHOTILA National high way no-8 chotila</td>
+                <td>chotila</td>
+                <td>chotila</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>3693520</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>P.H.CHAUHAN</td>
+                <td>-</td>
+                <td>9925020778</td>
+                <td>apmcchotila@yahoo.co.in</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Limbdi</td>
+                <td>APMC LIMBDI National highway no.8 limbdi</td>
+                <td>Limbdi</td>
+                <td>Limbdi</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>363421</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>D.G.RANA</td>
+                <td>-</td>
+                <td>98252 62262</td>
+                <td>limbdiapmc@gmail.com</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Muli</td>
+                <td>APMC MULI Surendranagar-Rajkot high way Muli</td>
+                <td>Muli</td>
+                <td>Muli</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>363510</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>D.B.CHUDASAMA</td>
+                <td>-</td>
+                <td>9825325574</td>
+                <td>apmcmuli@gmai.com</td>
+               
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Lakhtar</td>
+                <td>APMC LAKHATAR Railway Station Road lakhatar</td>
+                <td>Lakhtar</td>
+                <td>Lakhtar</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>382775</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>D.D.MORI</td>
+                <td>-</td>
+                <td>9824996149</td>
+                <td>apmclakhatar@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Sayala</td>
+                <td>APMC SAYLA National high way no-8 sayla</td>
+                <td>Sayala</td>
+                <td>Sayala</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>363430</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>R.V.DODIYA</td>
+                <td>-</td>
+                <td>9173770777</td>
+                <td>apmcsayla1@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Drangradhra</td>
+                <td>APMC Dhrangadhra surendranagar-ahmedabad byepass road Dhrangadhra</td>
+                <td>Drangradhra</td>
+                <td>Drangradhra</td>
+                <td>SURENDRANAGAR</td>
+                <td>GUJARAT</td>
+                <td>363310</td>
+                <td>Primary Market Yard</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>K.N.VAGHELA</td>
+                <td>-</td>
+                <td>9925583085</td>
+                <td>apmcdhrg@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF AHMEDABAD CITY DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Shri Chimanbhai Jivabhai Patel Market Yard</td>
+                <td>Sarkhej-Vasna, Village - Makatampura, Taluka & District, Ahmedabad-380055</td>
+                <td>AHMEDABAD</td>
+                <td>CITY</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>380055</td>
+                <td>RPM</td>
+                <td>POTATO,ONION,GARLIC</td>
+                <td>DIPAKBHAI. M.PATEL</td>
+                <td>(079)-25323634</td>
+                <td>9328376803</td>
+                <td>apmc-ahm-guj@nic.in</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sardar patel Market<br />
+                 </td>
+                <td>Jamalpur, Ahmedabad 380022</td>
+                <td>AHMEDABAD</td>
+                <td>CITY</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>380022</td>
+                <td>RSM</td>
+                <td>VEGETABLES</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Pandit Dindayal Daskroi Anaj Marketyard<br />
+                 </td>
+                <td>Jetalapur-bareja Highway, jetalpur</td>
+                <td>Jetalapur</td>
+                <td>DASKROI</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>382425</td>
+                <td>RSM</td>
+                <td>GRAINS</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+              <td>4</td>
+                <td>Naroda Fruit Market<br />
+                naroda, ahmedabad</td>
+                <td>Near ashok mill,Naroda, Ahmedabad</td>
+                <td>AHMEDABAD</td>
+                <td>CITY</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>380025</td>
+                <td>RSM</td>
+                <td>FRUITS</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Flower Market</td>
+                <td>jamalpur, ahmedabad</td>
+                <td>AHMEDABAD</td>
+                <td>CITY</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>380022</td>
+                <td>RSM</td>
+                <td>FLOWER</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Rajnagar-Bhagubhai Vanda Market</td>
+                <td>khamasha, Ahmedabad</td>
+                <td>AHMEDABAD</td>
+                <td>CITY</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>380001</td>
+                <td>RSM</td>
+                <td>VEGETABLES</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Municipal manekchawk Market</td>
+                <td>Manekchawk, ahmedabad</td>
+                <td>AHMEDABAD</td>
+                <td>CITY</td>
+                <td>AHMEDABAD</td>
+                <td>GUJARAT</td>
+                <td>380001</td>
+                <td>RSM</td>
+                <td>FRUITS</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF DEVBHUMI DWARKA DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Khambhaliya</td>
+                <td>Khambhaliya - Dwarka Highway, Khambhaliya</td>
+                <td>Khambhaliya</td>
+                <td>Khambhaliya</td>
+                <td>Devbhumi Dwarka</td>
+                <td>GUJARAT</td>
+                <td>361305</td>
+                <td>PMY</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>B. R. JOGAL</td>
+                <td>2833232725</td>
+                <td>9825507422</td>
+                <td>apmckhambhalia2725@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Bhanvad</td>
+                <td>At.Bhanvad, Ta.Bhanvad, Dist.Devbhumi Dwarka</td>
+                <td>Bhanvad</td>
+                <td>Bhanvad</td>
+                <td>Devbhumi Dwarka</td>
+                <td>GUJARAT</td>
+                <td>360510</td>
+                <td>PMY</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>S. K. KUBAVAT</td>
+                <td>-</td>
+                <td>9427277774</td>
+                <td>apmcbhanavad@yahoo.com</td>
+             
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bhatiya</td>
+                <td>At.Bhatiya, Ta.Kalyanpur, Dist.Devbhumi Dwarka</td>
+                <td>Bhatiya</td>
+                <td>Bhatiya</td>
+                <td>Devbhumi Dwarka</td>
+                <td>GUJARAT</td>
+                <td>361315</td>
+                <td>PMY</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>P. S. CHAVDA</td>
+                <td>-</td>
+                <td>9409404444</td>
+                <td>apmcbhatiya@gmail.com</td>
+              
+              </tr>
+              <tr>
+                <td colspan="14" class="p12  p13 p8 ">APMCS OF GIR SOMNATH DISTRICT</td>
+              </tr>
+              <tr>>
+                <TD>1</TD>
+                <td>UNA</td>
+                <td>OPP BUS STATION BHAVANAGAR OAD UNA</td>
+                <td>UNA</td>
+                <td>UNA</td>
+                <td>GIR SOMNATH</td>
+                <td>GUJARAT</td>
+                <td>362560</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>MANISH M SOLANKI</td>
+                <td>2876221612</td>
+                <td>9825713517</td>
+                <td>APMC.UNA@GMAIL.COM</td>
+              
+              </tr>
+              <tr>
+                <td>2</td>
+                <td> KODINAR</td>
+                <td>OPP RAILWAY STATION KODINAR</td>
+                <td>KODINAR</td>
+                <td>KODINAR</td>
+                <td>GIR SOMNATH</td>
+                <td>GUJARAT</td>
+                <td>362770</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>COTTON, WHEAT, GROUNDNUT, ETC.</td>
+                <td>PIYUSH P BARAD</td>
+                <td>2795221733</td>
+                <td>8511911111</td>
+                <td>APMC.KODINAR@YAHOO.COM</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>SUTRAPADA</td>
+                <td>PRANSALI MARKET YARD VERAVAL KODINAR NATINOL HIGHWAY<br />
+                NEAR HANUMANT PETROL PUMP</td>
+                <td>APMC -SUTRAPADA.</td>
+                <td>sutrapada</td>
+                <td>GIR SOMNATH</td>
+                <td>GUJARAT</td>
+                <td>362275</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>groundnut wheat,bajari, udid<br />
+                ,mug,soyabin,castel sead,<br />
+                juvar,tuver,dhana,chana,<br />
+                cotan,sisemume etc</td>
+                <td>s.k.barad</td>
+                <td>-</td>
+                <td>9714224108 9274042303</td>
+                <td>Apmcsutrapada@gmail.com</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>VERAVAL</td>
+                <td>NEAR HIRAN RIVER BRIEDGE , KAJLI</td>
+                <td>KAJLI</td>
+                <td>VERAVAL</td>
+                <td>GIR SOMNATH</td>
+                <td>GUJARAT</td>
+                <td>362268</td>
+                <td>primary market yard<br />
+                (PMY)</td>
+                <td>groundnut, millet, Chickpeas, wheat, soybeans, Chickpeas,<br />
+                millet, Sesame, Coriander</td>
+                <td>KANAKSINH R. PARMAR</td>
+                <td>(02876)<br />
+                233333</td>
+                <td>94094030530</td>
+                <td>apmcvrl@gmail.com</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>TALALA</td>
+                <td>SASAN ROD TALALA</td>
+                <td>TALALA</td>
+                <td>TALALA</td>
+                <td>GIR SOMNATH</td>
+                <td>GUJARAT</td>
+                <td>362150</td>
+                <td>primary market yard<br />
+                (PMY)</td>
+                <td>MANGO</td>
+                <td>RAMESHBHAI L DAND</td>
+                <td>-</td>
+                <td>9099113403</td>
+                <td>APMCTALALA@GMAIL.COM</td>
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF CHOTAUDEPUR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>BODELI</td>
+                <td>MARKET YARD BODELI</td>
+                <td>BODELI</td>
+                <td>BODELI</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>GUJARAT</td>
+                <td>391135</td>
+                <td>REGULATED PRIMARY MARKET RPM</td>
+                <td>COTTON, GROUNDNUT,</td>
+                <td>BHAGAT AJITKUMAR GURUSHRAN</td>
+                <td>02665 299415</td>
+                <td>9825855614</td>
+                <td>apmcbodeli@gmail.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>SANKHEDA</td>
+                <td>MARKET YARD BAHADARPUR</td>
+                <td>BAHADARPUR</td>
+                <td>SANKHEDA</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>GUJARAT</td>
+                <td>391125</td>
+                <td>REGULATED PRIMARY MARKET RPM</td>
+                <td>COTTON</td>
+                <td>BHAGAT AJITKUMAR GURUSHRAN</td>
+                <td>-</td>
+                <td>9825855614</td>
+                <td>ajitbhagat35@yahoo.com</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>NASAVADI</td>
+                <td>STATION ROAD MARKET YARD NASAVADI</td>
+                <td>NASAVADI</td>
+                <td>NASAVADI</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>GUJARAT</td>
+                <td>391150</td>
+                <td>SECONDARY MARKET SMY</td>
+                <td>NO</td>
+                <td>YASINSHA AHMEDSHA DIWAN (ASSI.SECRETRY)</td>
+                <td>02661 272208</td>
+                <td>9723192429 9265047871</td>
+                <td>apmcnaswadi01@gmail.com</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>KAWANT</td>
+                <td>KAWANT NASAWADI ROAD OPP.GEB MARKET YARD KAWANT</td>
+                <td>KAWANT</td>
+                <td>KAWANT</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>GUJARAT</td>
+                <td>391170</td>
+                <td>SECONDARY MARKET SMY</td>
+                <td>NO</td>
+                <td>DEVANG YOGESHBHAI JOSHI</td>
+                <td>02669 254146</td>
+                <td>9898102699</td>
+                <td>apmckawant@yahoo.com</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>JETPUR PAVI</td>
+                <td>HIGHWAY ROAD MARKET YARD JETPUR PAVI</td>
+                <td>JETPUR PAVI</td>
+                <td>JETPUR PAVI</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>GUJARAT</td>
+                <td>391160</td>
+                <td>REGULATED PRIMARY MARKET RPM</td>
+                <td>COTTON, GROUNDNUT,</td>
+                <td>ASHISHKUMAR H PATEL</td>
+                <td>-</td>
+                <td>9925786359</td>
+                <td>apmc3042@gmail.com</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>HIGHWAY ROAD MARKET YARD CHHOTAUDEPUR</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>CHHOTAUDEPUR</td>
+                <td>GUJARAT</td>
+                <td>391165</td>
+                <td>SECONDARY MARKET SMY</td>
+                <td>NO</td>
+                <td>SHANKARBHAI K PANCHAL</td>
+                <td>-</td>
+                <td>9537372505</td>
+                <td>apmcchhotaudepur@yahoo.com</td>
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF JAMANAGAR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>jamanagar</td>
+                <td>AT .Hapa ta.jamanagar</td>
+                <td>HAPA</td>
+                <td>JAMANAGAR</td>
+                <td>JAMANAGAR</td>
+                <td>GUJARAT</td>
+                <td>361120</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>HITESHBHAI A.PATEL</td>
+                <td>288570122</td>
+                <td>9824248787</td>
+                <td>apmcjamnagar@gmail.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>kalavad</td>
+                <td>NEAR POWER HOUSE,JAMNAGAR ROAD, KALAVAD</td>
+                <td>kalavad</td>
+                <td>KALAVAD</td>
+                <td>JAMANAGAR</td>
+                <td>GUJARAT</td>
+                <td>361160</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>RAMNIKBHAI GADHETHARIYA</td>
+                <td>-</td>
+                <td>9909012071</td>
+                <td>apmckld@gmail.com</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>jamjodhpur</td>
+                <td>BALVA ROAD, JAMJODHPUR</td>
+                <td>jamjodhpur</td>
+                <td>JAMJODHAPUR</td>
+                <td>JAMANAGAR</td>
+                <td>GUJARAT</td>
+                <td>360530</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>I/C EMISHBHAI KHANT</td>
+                <td>2898222156</td>
+                <td>9974009973</td>
+                <td>apmcjamjodhapur@yahoo.in</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>dhrol</td>
+                <td>jamanagar dhrol highway , near dhrol bus station</td>
+                <td>dhrol</td>
+                <td>DHROL</td>
+                <td>JAMANAGAR</td>
+                <td>GUJARAT</td>
+                <td>361210</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>UMESHBHAI KAGATHARA</td>
+                <td>-</td>
+                <td>9979868226</td>
+                <td>apmc-dhrol-jam@gujarat.gov.in</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>lalpur</td>
+                <td>near Telephone exchange lalpur</td>
+                <td>lalpur</td>
+                <td>LALPUR</td>
+                <td>JAMANAGAR</td>
+                <td>GUJARAT</td>
+                <td>361170</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES SEASONAL</td>
+                <td>I/C KRIPALSINH JADEJA</td>
+                <td>-</td>
+                <td>9638316671</td>
+                <td>apmclalpur@gmail.com</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>jodiya</td>
+                <td>AT.BADANPAR PATIYA ,</td>
+                <td>jodiya</td>
+                <td>JODIYA</td>
+                <td>JAMANAGAR</td>
+                <td>GUJARAT</td>
+                <td>361250</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>NO</td>
+                <td>MAYUR BHAI D, CHANIYARA</td>
+                <td>-</td>
+                <td>9907599999</td>
+                <td>apmcjodiya@gmail.com</td>
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF PATAN DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Patan</td>
+                <td>Sardar gung, market yard, Patan</td>
+                <td>Patan</td>
+                <td>Patan</td>
+                <td>Patan</td>
+                <td>Gujarat</td>
+                <td>384265</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Chaudhari Umedbhai</td>
+                <td>02766-230907</td>
+                <td>9638092212</td>
+                <td>apmcpatan@gmail.com</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Siddhpur</td>
+                <td>Market yard, Siddhpur</td>
+                <td>Siddhpur</td>
+                <td>Siddhpur</td>
+                <td>Patan</td>
+                <td> </td>
+                <td>384151</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Raval Bhagavanbhai</td>
+                <td>02767-220082</td>
+                <td>9909847207</td>
+                <td>apmcsidhdhpur@gmail.com</td>
+        
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Harij</td>
+                <td>Market yard, Harij</td>
+                <td>Harij</td>
+                <td>Harij</td>
+                <td>Patan</td>
+                <td> </td>
+                <td>384240</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Chaudhari Narsibhai</td>
+                <td>02733-223045</td>
+                <td>9879520138</td>
+                <td>-</td>
+              
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Radhanpur</td>
+                <td>Mira darvaja, Kandala highway, Radhanpur</td>
+                <td>Radhanpur</td>
+                <td>Radhanpur</td>
+                <td>Patan</td>
+                <td> </td>
+                <td>385340</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Chaudhari Bhagavanbhai</td>
+                <td>02746-277202</td>
+                <td>9427065441</td>
+                <td>-</td>
+          
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Varahi</td>
+                <td>Radhanpur National Highway, Varahi</td>
+                <td>Varahi</td>
+                <td>Santalpur</td>
+                <td>Patan</td>
+                <td> </td>
+                <td>385360</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Prajapati Gautambhai</td>
+                <td>-</td>
+                <td>9586767373</td>
+                <td>apmcvarahi@gmail.com</td>
+            
+              </tr>
+              <tr>
+              <td>6</td>
+                <td>Sami</td>
+                <td>Market yard, Sami</td>
+                <td>Sami</td>
+                <td>Sami</td>
+                <td>Patan</td>
+                <td> </td>
+                <td>384245</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Prajapati Govindbhai</td>
+                <td>-</td>
+                <td>9913484808</td>
+                <td>apmcsami11@gmail.com</td>
+             
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Chanasma</td>
+                <td>Chanasma Patan Highway</td>
+                <td>Chanasma</td>
+                <td>Chanasma</td>
+                <td>Patan</td>
+                <td> </td>
+                <td>384220</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Patel Dilipbhai</td>
+                <td>02734-222016</td>
+                <td>9228466526</td>
+                <td>chanasmaapmc62@gmail.com</td>
+                
+              </tr>
+              <tr>
+                 <td colspan="14" class="p12 p13 p8 ">APMCS OF GANDHINAGAR DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Gandhinagar</td>
+                <td>main market yard, At-Randheja, Ta-Dist- Gandhinagar. 382620</td>
+                <td>Randheja</td>
+                <td>Gandhinagar</td>
+                <td>Gandhinagar</td>
+                <td>Gujarat</td>
+                <td>382620</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Patel Yagneshbhai</td>
+                <td>-</td>
+                <td>9979012203</td>
+                <td>apmcgandhinagar079@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Kalol</td>
+                <td>main market yard, kalol, At-Ta-Kalol, Gadhinagar. 382721, S.no. 252/349</td>
+                <td>Kalol</td>
+                <td>Kalol</td>
+                <td>Gandhinagar</td>
+                <td>Gujarat</td>
+                <td>382721</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Patel Jagdish</td>
+                <td>-</td>
+                <td>9979121561</td>
+                <td>apmckalol@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mansa</td>
+                <td>main market yard, Mansa, At-Ta-Mansa, Dist-Gandhinagar. 382845, S.no. 1515/1/3</td>
+                <td>Mansa</td>
+                <td>Mansa</td>
+                <td>Gandhinagar</td>
+                <td>Gujarat</td>
+                <td>382845</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Patel Kaushikkumar</td>
+                <td>-</td>
+                <td>8347617305</td>
+                <td>apmc_mansa@yahoo.co.in</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Dehgam</td>
+                <td>jawahar market<br />
+                Dehgam,382305, S.no. 41/1</td>
+                <td>Dehgam</td>
+                <td>Dehgam</td>
+                <td>Gandhinagar</td>
+                <td>Gujarat</td>
+                <td>382305</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>Yatinkumar Shah</td>
+                <td>-</td>
+                <td>9898415664</td>
+                <td>apmc.dehgam51@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td colspan="14" class="p12  p13 p8 ">APMCS OF MORBI DISTRICT</td>
+              </tr>
+              <tr>
+                <td>a</td>
+                <td>MORBI</td>
+                <td>SHANALA ROAD, MORBI</td>
+                <td>MORBI</td>
+                <td>MORBI</td>
+                <td>MORBI</td>
+                <td>GUJARAT</td>
+                <td>363641</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>KANTIBHAI VASHNANI</td>
+                <td>-</td>
+                <td>8140277509</td>
+                <td>apmc.morbi@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>WANKANER</td>
+                <td>NATIONAL HIGHWAY, CHANDRAPUR, WANKANER</td>
+                <td>CHANDRAPUR</td>
+                <td>WANKANER</td>
+                <td>MORBI</td>
+                <td>GUJARAT</td>
+                <td>363621</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>ABDULBHAI CHAUDHARI</td>
+                <td>-</td>
+                <td>9909200329</td>
+                <td>apmc_wankaner@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>HALVAD</td>
+                <td>NEAR G.I.D.C. DHANGADHRA ROAD, HALVAD</td>
+                <td>HALVAD</td>
+                <td>HALVAD</td>
+                <td>MORBI</td>
+                <td>GUJARAT</td>
+                <td>363330</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>MAHESHBHAI KUNDALIYA</td>
+                <td>-</td>
+                <td>9909447677</td>
+                <td>apmchalvad@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS DAHOD DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>DAHOD</td>
+                <td>AT PADAV ROAD DAHOD</td>
+                <td>DAHOD</td>
+                <td>DAHOD</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389151</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>AJAYBHAI KABARAWAL</td>
+                <td>-</td>
+                <td>9228135500</td>
+                <td>apmcdahod2007@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>ZALOD</td>
+                <td>AT BASWADA ROAD ZALOD</td>
+                <td>ZALOD</td>
+                <td>ZALOD</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389170</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>NARENDRAKUMAR PANCHAL</td>
+                <td>-</td>
+                <td>7435083003</td>
+                <td>apmcjhalod@yahoo.com</td>
+               
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>DEVAGADBARIA</td>
+                <td>AT TAWAR PACHI DEVAGADBARIA</td>
+                <td>DEVAGADBARIA</td>
+                <td>DEVAGADBARIA</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389380</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>GOPALBHAI RANA</td>
+                <td>-</td>
+                <td>9726466348</td>
+                <td>apmc_dbaria@yahoo.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>LIMKHEDA</td>
+                <td>AT POST OFFECI NI SAME LIMKHEDA</td>
+                <td>LIMKHEDA</td>
+                <td>LIMKHEDA</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389140</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>PRAVINBHAI PATEL</td>
+                <td>-</td>
+                <td>9429079124</td>
+                <td>-</td>
+               
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>GARBADA</td>
+                <td>AT I.T.I. NI SAME GARBADA</td>
+                <td>GARBADA</td>
+                <td>GARBADA</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389155</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>I/C MOHANBHAI NANABHAI HATHILA</td>
+                <td> </td>
+                <td>9638638260</td>
+                <td>-</td>
+              
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>FATEPURA</td>
+                <td>AT ZALOD ROAD FATEPURA</td>
+                <td>FATEPURA</td>
+                <td>FATEPURA</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389146</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>CHIMANBHAI KALUBHAI MUNIYA</td>
+                <td>-</td>
+                <td>9879723719</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>SANJELI</td>
+                <td>AT ZALOD ROAD SANJELI</td>
+                <td>SANJELI</td>
+                <td>SANJELI</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389175</td>
+                <td>PRIMARY MARKET YARD (PMY)</td>
+                <td>YES</td>
+                <td>PRAKASHBHAI JETABHAI DASAMA</td>
+                <td>-</td>
+                <td>9925323081</td>
+                <td>apmcsanjeli@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>DHANPUR</td>
+                <td>AT DHANPUR</td>
+                <td>DHANPUR</td>
+                <td>DHANPUR</td>
+                <td>DAHOD</td>
+                <td>Gujarat</td>
+                <td>389382</td>
+                <td>NO</td>
+                <td>NO</td>
+                <td>I/C PRAVINBHAI PATEL</td>
+                <td>-</td>
+                <td>9429079124</td>
+                <td>-</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF SABARKANTHA DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>HIMMATNAGAR</td>
+                <td>KHED TASIYA ROAD HIMMATNAGAR</td>
+                <td>HIMMATNAGAR</td>
+                <td>HIMMATNAGAR</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383001</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>MANIBHAI K PATEL</td>
+                <td>02772 228678</td>
+                <td>9825634437</td>
+                <td>apmchimmatnagar@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>IDAR</td>
+                <td>RAIL EAY STATION ROAD IDAR</td>
+                <td>IDAR</td>
+                <td>IDAR</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383430</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>INDRAJITSINH R CHAMPAVAT</td>
+                <td>02778 250068</td>
+                <td>9825409151</td>
+                <td>idarapmc@yahoo.in</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>VADALI</td>
+                <td>AMBAJI HIGHWAY VADALI</td>
+                <td>VADALI</td>
+                <td>VADALI</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383235</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>NILESHBHAI S MAHETA</td>
+                <td>02778 222020</td>
+                <td>9328440848</td>
+                <td>apmcvadali@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>KHEDBRAHMA</td>
+                <td>SARADAR CHOK KHEDBRAHMA</td>
+                <td>KHEDBRAHMA</td>
+                <td>KHEDBRAHMA</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383255</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>RAHULKUMAR M PATEL</td>
+                <td>02775 220054</td>
+                <td>8200240790</td>
+                <td>apmckhedbrahma@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>VIJAYNAGAR</td>
+                <td>AT KUNDALA KAMPA,</td>
+                <td>KUNDALA KAMPA</td>
+                <td>VIJAYNAGAR</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383460</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>SATAPALSINH M CHAUHAN</td>
+                <td>-</td>
+                <td>8511216002</td>
+                <td>vijaynagarapmc@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>PRANTIJ</td>
+                <td>AHMEDABAD HGHWAY PRANTIJ (KAMALPUR)</td>
+                <td>PRANTIJ (KAMALPUR)</td>
+                <td>PRANTIJ</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383205</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>SHAILESHKUMAR M PATEL</td>
+                <td>02770 233565</td>
+                <td>9428770100</td>
+                <td>prantijapmc@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>TALOD</td>
+                <td>SUBHASH CHOK, NEAR RAIL WAY CROSSING, TALOD</td>
+                <td>TALOD</td>
+                <td>TALOD</td>
+                <td>SABARKANTHA</td>
+                <td>GUJARAT</td>
+                <td>383215</td>
+                <td>PRIMARY MARKET YARD</td>
+                <td>YES</td>
+                <td>VIMALKUMAR V BHATT</td>
+                <td>02770 296404</td>
+                <td>7359717672</td>
+                <td>apmctalod1948@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12  p13 p8 ">APMCS OF MEHSANA DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>mehsana</td>
+                <td>AT. POST - MEHSANA</td>
+                <td>MEHSANA</td>
+                <td>MEHSANA</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384001</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>PARVINBHAI PATEL</td>
+                <td>(02762) 253080</td>
+                <td>9427378909</td>
+                <td>MEHSANAAPMC@GAMIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>UNJHA</td>
+                <td>AT.POST - UNJHA</td>
+                <td>UNJHA</td>
+                <td>UNJHA</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384170</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>RAJENDRBHAI PATEL</td>
+                <td>(02767) 252508</td>
+                <td>9898306890</td>
+                <td>APMCUNJHA@YAHOO.COM</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>VISNAGAR</td>
+                <td>AT.POST - VISNAGAR</td>
+                <td>VISNAGAR</td>
+                <td>VISNAGAR</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384315</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>KAMLESHBHAI PATEL</td>
+                <td>(02765) 231145</td>
+                <td>9426744471</td>
+                <td>APMCVIS62@GMAIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>VIJAPUR</td>
+                <td>AT.POST -VIJAPUR</td>
+                <td>VIJAPUR</td>
+                <td>VIJAPUR</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>382850</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>RAMESHBHAI PATEL</td>
+                <td>(02763) 220001</td>
+                <td>9979929212</td>
+                <td>APMCVIJAPUR@GAMIL.COM</td>
+              
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>KADI</td>
+                <td>AT.POST - KADI</td>
+                <td>KADI</td>
+                <td>KADI</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>382715</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>KAMLESHBHAI</td>
+                <td>(02764) 242237</td>
+                <td>7016171399</td>
+                <td>APMCKADI@GAMIL.COM</td>
+               
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>UNAVA</td>
+                <td>AT.POST - UNAVA</td>
+                <td>UNAVA</td>
+                <td>UNJHA</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384160</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>RAJUBHAI PATEL</td>
+                <td>(02767) 254250</td>
+                <td>9825046869</td>
+                <td>>APMCUNAVA@GAMIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>BECHRAJI</td>
+                <td>AT.POST - BECHRAJI</td>
+                <td>BECHRAJI</td>
+                <td>BECHRAJI</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384210</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>CHENBHAI PATEL</td>
+                <td>(02734) 286716</td>
+                <td>9099063476</td>
+                <td>APMCBECHRAJI@GAMIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>SATLASANA</td>
+                <td>AT.POST- SATLASANA</td>
+                <td>SATLASANA</td>
+                <td>SATLASANA</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384330</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>RAMJIBHAI CHAUDHARY</td>
+                <td>(02761) 253607</td>
+                <td>9426370228</td>
+                <td>APMCSAT305@GAMIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>VADNAGAR</td>
+                <td>AT.POST-VADNAGAR</td>
+                <td>VADNAGAR</td>
+                <td>VADNAGAR</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384355</td>
+                <td>PMY</td>
+                <td>NO</td>
+                <td>HARDIKBHAI CHAUDHARY</td>
+                <td>(02761) 223802</td>
+                <td>7359056040</td>
+                <td></td>
+               
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>KHERALU</td>
+                <td>AT.POST-KHERALU</td>
+                <td>KHERALU</td>
+                <td>KHERALU</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384325</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>DIPAKBHAI CHAUDHARY</td>
+                <td>(02761) 231590</td>
+                <td>8153099515</td>
+                <td>APMCKH/2016@GAMIL.COM</td>
+               
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>JOTANA</td>
+                <td>AT.POST-JOTANA</td>
+                <td>JOTANA</td>
+                <td>JOTANA</td>
+                <td>MEHSANA</td>
+                <td>GUJARAT</td>
+                <td>384421</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>DHAVLBHAI</td>
+                <td>(02762) 265677</td>
+                <td>9974579754</td>
+                <td>APMCJOTANA@GAMIL.COM</td>
+                
+              </tr>
+              <tr>
+                <td colspan="14" class="p12 p13 p8 ">APMCS OF ARAVALLI DISTRICT</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>MODASA</td>
+                <td>AT&PO-MODASA</td>
+                <td>MODASA</td>
+                <td>MODASA</td>
+                <td>ARAVALLI</td>
+                <td>GUJARAT</td>
+                <td>383315</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>BHATT GANSHYAMBHAI</td>
+                <td>02774-249433</td>
+                <td>9998838200</td>
+                <td>modasaapmc@gmail.com</td>
+               
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>DHANSURA</td>
+                <td>AT&PO-DHANSURA</td>
+                <td>DHANSURA</td>
+                <td>DHANSURA</td>
+                <td>ARAVALLI</td>
+                <td>GUJARAT</td>
+                <td>383310</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>PATEL RAVINDRBHAI B</td>
+                <td>2774222006</td>
+                <td>9879815288</td>
+                <td>apmc222006@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>BAYAD</td>
+                <td>AT&PO-BAYAD</td>
+                <td>BAYAD</td>
+                <td>BAYAD</td>
+                <td>ARAVALLI</td>
+                <td>GUJARAT</td>
+                <td>383325</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>PATEL JIGNESHBHAI K</td>
+                <td>-</td>
+                <td>9825067961</td>
+                <td>apmcbayad1@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>MALPUR</td>
+                <td>AT&PO-MALPUR</td>
+                <td>MALPUR</td>
+                <td>MALAPUR</td>
+                <td>ARAVALLI</td>
+                <td>GUJARAT</td>
+                <td>383345</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>PARAMAR KALUSINH</td>
+                <td>--</td>
+                <td>8200820106</td>
+                <td>apmcmalpurarvalli@gmail.com</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>MEGHARAJ</td>
+                <td>AT&PO-MEGHARAJ</td>
+                <td>MEGHARAJ</td>
+                <td>MEGHARAJ</td>
+                <td>ARAVALLI</td>
+                <td>GUJARAT</td>
+                <td>383350</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>DILIPBHAI CHAUHAN</td>
+                <td>-</td>
+                <td>9898239428</td>
+                <td>apmcmeghraj@gmail.com</td>
+                
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>BHILODA</td>
+                <td>AT&PO-BHILODA</td>
+                <td>BHILODA</td>
+                <td>BHILODA</td>
+                <td>ARAVALLI</td>
+                <td>GUJARAT</td>
+                <td>383245</td>
+                <td>PMY</td>
+                <td>YES</td>
+                <td>YOGESHBHAI PRAJAPATI</td>
+                <td>-</td>
+                <td>9601654564</td>
+                <td>bhilodaapmc@yahoo.in</td>
+              </tr>
+          </table>
+      </div>
+      </div>
+      <!-- contact details -->
+      <div class="tab-pane fade" id="item6">
+      <h2 class="p1 p8">Gallery</h2>
+      <br><br>
+      <div>
+        <div class="row">
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g6.jpg"height="250px" width="300px" style="border-radius: 30%;"></div>
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g2.jpg"height="250px" width="300px" style="border-radius: 30%;"></div>
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g3.jpg"height="250px" width="300px" style="border-radius: 30%;"></div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g1.jpg" height="250px" width="300px" style="border-radius: 20%;"></div>
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g4.jpg" height="250px" width="300px" style="border-radius: 20%;"></div>
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g5.jpg" height="250px" width="300px" style="border-radius: 20%;"></div>
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g7.jpg" height="250px" width="300px" style="border-radius: 25%;"></div>
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g8.jpg" height="250px" width="300px" style="border-radius: 25%;"></div>
+          <div class="col-sm-4  p-3"><img src="apmcphoto/g9.jpg" height="250px" width="300px" style="border-radius: 25%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br><br>
+  <div class="container-fluid bg-success">
+    <div>
+        <p class="p23">© 2025 APMC Website. All Rights Reserved. Design by Krish Radadiya
+        </p>
+    </div>
+</div>
+</body>
+</html>
