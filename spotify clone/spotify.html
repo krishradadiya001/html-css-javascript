@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./spotify.css">
+    <link rel="icon" href=" logo.png">
+    <title>Spotify - Web Player: music for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav-option">
+                <a href="#">
+                    <i class="fa-solid fa-house" style="opacity: 1;"></i>
+                    <span style="opacity: 1;">Home</span>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass search"></i>
+                    <span>Search</span>
+                </a>
+            </div>
+            <div class="library">
+                <div class="heading">
+                    <div class="header">
+                        <img src="library_icon.png" alt="lib">
+                        <span>Your Library</span>
+                    </div>
+                    <div class="header-icon">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right hide"></i>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <p class="p1">Create your first playlist</p>
+                    <p class="p2">It's easy we'll help you</p>
+                    <button class="badge">Create playlist</button>
+                </div>
+                <div class="boxes">
+                    <p class="p1">Let's find some podcasts to follow</p>
+                    <p class="p2">We'll keep you updated on new episodes</p>
+                    <button class="badge">Browse podcast</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-content" style="overflow: auto;">
+            <div class="sticky-header">
+                <div class="left-buttons">
+                    <img src=" backward_icon.png" alt="backward_icon">
+                    <img src=" forward_icon.png" class="hide" alt="forward_icon">
+                </div>
+                <div class="right-buttons">
+                    <button class="hide">Explore Premium</button>
+                    <button class="install-button"><i class="fa-regular fa-circle-down install-icon"></i>Install
+                        App</button>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </div>
+            <div class="sections">
+                <h2>Recently Played</h2>
+                <div class="maincard">
+                    <div class="cards">
+                        <img src=" card1img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sections">
+                <h2>Trending now near you</h2>
+                <div class="maincard">
+                    <div class="cards">
+                        <img src=" card2img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                    <div class="cards">
+                        <img src=" card3img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                    <div class="cards">
+                        <img src=" card4img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                    <div class="cards">
+                        <img src=" card5img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                    <div class="cards">
+                        <img src=" card6img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                    <div class="cards">
+                        <img src=" card4img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="sections">
+                <h2>Recently Played</h2>
+                <div class="maincard">
+                    <div class="cards">
+                        <img src=" card1img.jpeg" alt="card1img">
+                        <h4>Top 50 - Global</h4>
+                        <p>Your daily updates of the most played tracks...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <div class="music-player">
+            <div class="music">
+                <img src=" card4img.jpeg" alt="player_icon1">
+                <div class="a">
+                    <a href="#">Lk Kahani</a>
+                    <a href="#" class="artist-name">Gajendra varma</a>
+                </div>
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+            <div class="progressbar">
+                <div class="progressbar-icons">
+                    <img src=" player_icon1.png" style="height: 1rem;  margin: 0 1rem;" alt="player_icon1">
+                    <img src=" player_icon2.png" style="height: 1rem;  margin: 0 1rem;" alt="player_icon2">
+                    <img src=" player_icon3.png" style="height: 2rem;  margin: 0 1rem; opacity: 1;" alt="player_icon3">
+                    <img src=" player_icon4.png" style="height: 1rem;  margin: 0 1rem;" alt="player_icon4">
+                    <img src=" player_icon5.png" style="height: 1rem; margin: 0 1rem;" alt="player_icon5">
+                </div>
+                <div class="progressbar-line">
+                    <span>1:56</span>
+                    <input type="range" >
+                    <span>3:33</span>
+                </div>
+            </div>
+            <div class="right-icons">
+                <img src=" controls_icon1.png" style="height: 2.5rem; margin-right: .5rem;" alt="1">
+                <img src=" controld_icon2.png" style="height: 2rem; margin-right: .5rem;" alt="2">
+                <img src=" controls_icon3.png" style="opacity: .8; height: 1.5rem; margin-right: .5rem;" alt="3">
+                <img src=" controls_icon4.png" style="opacity: .8; height: 1rem; margin-right: .5rem;" alt="4">
+                <img src=" controls_icon5.png" style="height: 2.5rem; margin-right: .5rem;" alt="5">
+                <input type="range" style="margin-right: .5rem;">
+                <img src=" album_icon2.png" style="height: 2.20rem; margin-right: .5rem;" alt="6">
+                <i class="fa-solid fa-arrows-up-down" style="color: #fff; font-size: 1rem; opacity: .7; rotate: 45deg; padding: 4px; margin-right: .5rem;"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
